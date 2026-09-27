@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eef4f8">
+  <meta name="description" content="Help with Twofold Weather: temperature units, layouts, cities, refreshing, widgets, rain radar, forecast alerts, data sources, deleting data, and contacting the developer.">
+  <title>Support | Twofold Weather</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header shell">
+    <a class="brand" href="index.html" aria-label="Twofold Weather home"><span class="brand-mark" aria-hidden="true"></span>Twofold</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="support.html" aria-current="page">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <main id="main" class="shell" tabindex="-1">
+    <header class="page-heading">
+      <p class="eyebrow">Twofold Weather / Help</p>
+      <h1>Support.</h1>
+      <p class="lede">Answers to common questions, and how to reach the developer if something is not working.</p>
+      <p class="small-note">For iPhone and iPad with iOS 18 or later. Support is also linked from <strong>About &amp; settings &rarr; Support</strong> in the app.</p>
+    </header>
+
+    <div class="reading-grid">
+      <nav class="page-nav" aria-label="Support topics">
+        <p class="eyebrow">Find an answer</p>
+        <a href="#contact">Contact</a>
+        <a href="#using">Using the app</a>
+        <a href="#readings">Readings &amp; sources</a>
+        <a href="#radar">Radar</a>
+        <a href="#alerts">Alerts</a>
+        <a href="#data">Your data</a>
+      </nav>
+
+      <article class="prose" aria-label="App help">
+        <section class="contact-card" aria-labelledby="contact">
+          <p class="eyebrow">Get in touch</p>
+          <h2 id="contact">Contact Abhishek.</h2>
+          <a class="contact-email" href="mailto:aagrawal207@gmail.com?subject=Twofold%20Weather%20support">aagrawal207@gmail.com</a>
+          <p>For a problem report, include the app version, device model and iOS version, what you tapped, and the message you saw. For a weather discrepancy, the city, provider label and displayed timestamp help identify the reading.</p>
+          <p class="small-note">A screenshot is useful if you are comfortable sharing it. An exact personal address or GPS position is not needed. Email is voluntary and handled as described in the <a href="privacy.html#support-messages">privacy policy</a>.</p>
+        </section>
+
+        <section class="faq" aria-labelledby="using">
+          <h2 id="using">Using the app</h2>
+          <details>
+            <summary>How do I change temperature units?</summary>
+            <p>Open <strong>About &amp; settings &rarr; Temperature &rarr; First temperature scale</strong> and choose Celsius or Fahrenheit first. Paired readings and widgets follow this order.</p>
+            <p>For one large reading, choose <strong>Tap to switch</strong> from the grid button. Use the &deg;C/&deg;F and Actual/Feels like controls, or tap the temperature to switch scales. These choices are saved separately from the paired order.</p>
+          </details>
+          <details>
+            <summary>How do I change the layout or simplify a card?</summary>
+            <p>The grid button beside the app name chooses the home layout (Dashboard, Reading list, Forecast first or Conditions first), the current-conditions layout (Side by side, Four readings, By scale or Tap to switch) and the card size. <strong>Compact</strong> cards keep the main reading and become shorter; <strong>Detailed</strong> is the default. Card size is also in <strong>About &amp; settings &rarr; Appearance</strong>.</p>
+          </details>
+          <details>
+            <summary>How do I add, reorder, or remove cities?</summary>
+            <p>Open <strong>Your places</strong> with the list button. Type at least three characters to search, or choose <strong>Use my location</strong>. Twofold saves up to 12 cities. Use <strong>Edit</strong> to reorder them, or swipe a city to remove it. Swipe left or right on the forecast to move between cities.</p>
+            <p>Search works with location permission off. If location access was denied, change it in iOS Location Services settings.</p>
+          </details>
+          <details>
+            <summary>Why has the reading not changed after a refresh?</summary>
+            <p>Pull down on the forecast to refresh. Twofold also refreshes the selected city when you return to the app. A fresh cached response may be reused, and a provider may return unchanged data, so check the reading's timestamp.</p>
+            <p>If a request fails, Twofold keeps labelled saved weather when available. An unavailable field is not a zero reading. If the app asks you to wait, repeated refreshes do not bypass the provider cooldown or local request limit; the daily limit resets at midnight UTC.</p>
+          </details>
+          <details>
+            <summary>How do I add or change a widget?</summary>
+            <p>Load a city in Twofold first. Then touch and hold the Home Screen, choose <strong>Edit &rarr; Add Widget</strong>, and search for <strong>Twofold</strong>. For the Lock Screen, touch and hold it and choose <strong>Customize &rarr; Add Widgets</strong>. The small widget also works in StandBy.</p>
+            <p>To choose a city, touch and hold a widget and choose <strong>Edit Widget &rarr; City</strong>. <strong>Follow Twofold</strong> uses the app's selected city. iOS decides when widgets update; Twofold asks for new weather about hourly.</p>
+          </details>
+          <details>
+            <summary>Why is the weather background still?</summary>
+            <p>Motion pauses with iOS Reduce Motion, Low Power Mode, or a hidden or inactive forecast. Missing weather uses a neutral background.</p>
+          </details>
+        </section>
+
+        <section class="faq" aria-labelledby="readings">
+          <h2 id="readings">Readings and sources</h2>
+          <details>
+            <summary>Why does the temperature differ from another app?</summary>
+            <p>Open <strong>About &amp; settings &rarr; Weather sources</strong> to see the city, coordinates, provider and reading time. Open-Meteo supplies area-based model estimates. In the US, Twofold checks up to three nearby NWS stations and may use a quality-checked observation within 25 km. A station measures its own site, not every address in a city, and other apps can use different sources and update times.</p>
+          </details>
+          <details>
+            <summary>What does "Feels like" explained show?</summary>
+            <p>For Open-Meteo readings, the Feels like card splits the gap between feels like and actual into wind, humidity and sunshine. The split is approximate. NWS station readings use wind chill or heat index instead.</p>
+          </details>
+          <details>
+            <summary>What does the Precipitation card show?</summary>
+            <p>The large value is today's expected total. <strong>Now:</strong> shows the latest reading when available; a missing reading is left out rather than shown as zero. Detailed cards also show the day's peak chance of precipitation.</p>
+          </details>
+          <details>
+            <summary>Why is pollen not available?</summary>
+            <p>Pollen comes from the Copernicus Atmosphere Monitoring Service (CAMS) through Open-Meteo, and CAMS models pollen only over Europe. Elsewhere the card says <strong>Not available</strong> rather than showing zero.</p>
+          </details>
+          <details>
+            <summary>Are NWS alerts live everywhere?</summary>
+            <p>NWS alerts cover supported US locations and territories only. An unavailable or saved alert check does not confirm that there are no current warnings, and bulletins do not send notifications. Consult your official weather authority for current warnings.</p>
+          </details>
+          <details>
+            <summary>Are sun and moon times exact?</summary>
+            <p>Sun times come from the forecast when available. Otherwise the device calculates them, marked &asymp; in the hourly forecast and <strong>Approximate</strong> on the day page. Moon phase and illumination are always approximate calculations on the device.</p>
+          </details>
+        </section>
+
+        <section class="faq" aria-labelledby="radar">
+          <h2 id="radar">Rain radar</h2>
+          <details>
+            <summary>How does the rain radar work?</summary>
+            <p>Open the map; <strong>Rain radar</strong> is the first layer. It plays the past two hours of composite radar from RainViewer in 10-minute frames, centred on the selected city. Tap pause or drag the time slider to pick a frame. Radar shows precipitation that has already fallen, not a forecast. The source stops at zoom level 7, so close zooms look soft.</p>
+          </details>
+          <details>
+            <summary>Why is the radar not loading?</summary>
+            <p>Check your connection and tap <strong>Try again</strong>. RainViewer's free service has no availability guarantee. If frames load slowly, hold the map still: Twofold limits itself to 80 radar requests a minute and loads the newest frame first. An area may also be outside radar coverage. For US places, <strong>Open US radar</strong> opens the official NWS radar site.</p>
+          </details>
+        </section>
+
+        <section class="faq" aria-labelledby="alerts">
+          <h2 id="alerts">Forecast alerts</h2>
+          <details>
+            <summary>How do forecast alerts work?</summary>
+            <p>Open <strong>About &amp; settings &rarr; Weather alerts</strong> and tap <strong>Add alert</strong>. Choose temperature or feels like above or below a value, rain chance, wind gusts, or UV index, for one saved city or all of them, at the forecast hour or 1, 3 or 12 hours before. Up to 10 alerts can be saved.</p>
+            <p>Twofold looks through the next 36 hours of each city's saved forecast and schedules a notification when the forecast newly crosses your threshold. These are your own thresholds, not official warnings, and they are scheduled on the device.</p>
+          </details>
+          <details>
+            <summary>Why are my alerts not arriving?</summary>
+            <ul>
+              <li><strong>Notifications are off.</strong> On the alerts page, tap <strong>Open notification settings</strong> and allow them. Focus modes and summaries can also hold them back.</li>
+              <li><strong>The app has not refreshed recently.</strong> Alerts are planned only when Twofold refreshes a city in the app. There is no background fetch, and a forecast more than 12 hours old plans nothing new.</li>
+              <li><strong>The alert is off or the threshold was not crossed.</strong> A missing forecast value never counts as a crossing.</li>
+              <li><strong>Too many alerts.</strong> At most 20 notifications are scheduled at once, soonest first.</li>
+            </ul>
+          </details>
+        </section>
+
+        <section class="faq" aria-labelledby="data">
+          <h2 id="data">Your data</h2>
+          <details>
+            <summary>How do I delete stored data?</summary>
+            <p>Removing a saved city removes its entry, saved snapshot and any alerts set for that city, but does not immediately clear the separate HTTP or radar caches. There is no in-app reset button. Deleting the app removes its local data; offloading it keeps the data. Provider logs and existing device backups are separate. See <a href="privacy.html#deletion">Your controls and deletion</a>.</p>
+          </details>
+          <details>
+            <summary>What is sent over the network?</summary>
+            <p>Weather requests send rounded coordinates and your IP address to the providers. City searches send the text you type to Open-Meteo. The radar and map contact RainViewer and Apple. There are no accounts, ads or analytics. Full details are in the <a href="privacy.html#services">privacy policy</a>.</p>
+          </details>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer shell">
+    <p>Twofold Weather <span aria-hidden="true">/</span> <small>&copy; 2026 Abhishek Agrawal</small></p>
+    <nav aria-label="Footer navigation"><a href="index.html">Home</a><a href="privacy.html">Privacy policy</a></nav>
+  </footer>
+</body>
+</html>
