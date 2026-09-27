@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eef4f8">
+  <meta name="description" content="Twofold Weather's privacy policy: on-device storage, optional approximate location, the weather, radar and map services that receive requests, local forecast alerts, and no accounts, ads, tracking, or analytics.">
+  <title>Privacy Policy | Twofold Weather</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header shell">
+    <a class="brand" href="index.html" aria-label="Twofold Weather home"><span class="brand-mark" aria-hidden="true"></span>Twofold</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
+    </nav>
+  </header>
+
+  <main id="main" class="shell" tabindex="-1">
+    <header class="page-heading">
+      <p class="eyebrow">Twofold Weather / Privacy</p>
+      <h1>Privacy policy.</h1>
+      <p class="lede">Twofold has no account system, advertising, tracking, or analytics service. It does not sell personal data or send app diagnostics to a developer-operated server. Weather, radar and map providers still receive the information needed to answer each request.</p>
+      <p class="small-note">Last updated: 27 September 2026. This policy covers the Twofold Weather app for iPhone and iPad, its widgets, and this support website, provided by Abhishek Agrawal.</p>
+    </header>
+
+    <div class="reading-grid">
+      <nav class="page-nav" aria-label="Privacy sections">
+        <p class="eyebrow">In this policy</p>
+        <a href="#on-device">On-device data</a>
+        <a href="#location">Location</a>
+        <a href="#search">City search</a>
+        <a href="#services">Services</a>
+        <a href="#widgets">Widgets</a>
+        <a href="#notifications">Notifications</a>
+        <a href="#no-tracking">No tracking</a>
+        <a href="#children">Children</a>
+        <a href="#deletion">Your controls</a>
+        <a href="#support-messages">Support email</a>
+        <a href="#website">This website</a>
+        <a href="#contact">Changes &amp; contact</a>
+      </nav>
+
+      <article class="prose" aria-label="Privacy policy details">
+        <section aria-labelledby="on-device">
+          <h2 id="on-device">Data stored on your device</h2>
+          <ul>
+            <li><strong>Saved places and preferences:</strong> city names, region and country, coordinates rounded to two decimal places, time zones, the selected city, list order, temperature order, layouts, card size, and the focused reading's scale and type. These are kept in the app's preferences (<code>UserDefaults</code>).</li>
+            <li><strong>Forecast alerts:</strong> your alert rules (kind, threshold, city, lead time, on or off) and a record of each planned notification's forecast time.</li>
+            <li><strong>Saved weather:</strong> last-good weather snapshots, stored as JSON in the app's cache. When the app restores them, it ignores snapshots older than 48 hours and snapshots for places no longer saved. This is a freshness filter, not a guarantee that every cached file is deleted on schedule.</li>
+            <li><strong>HTTP responses:</strong> a response cache of up to 64 MiB, shared with the widgets. It can hold weather, alerts and city-search results, including place names and coordinates returned by providers, until cache pruning or app deletion.</li>
+            <li><strong>Radar tiles:</strong> RainViewer images, in a separate private cache of up to 64 MB. Their tile coordinates reflect map areas you viewed.</li>
+            <li><strong>Request-limit state:</strong> request times, costs and provider cooldowns, so limits apply to the app and widgets together. This state does not record city names or search text.</li>
+          </ul>
+          <p>Local diagnostic counters and system logs record provider names, request outcomes and durations, cache use, and errors. Twofold's diagnostic messages do not include city names, coordinates, IP addresses, or full request URLs, and they are not sent to the developer.</p>
+          <p>The shared weather cache and request-limit files are excluded from device backups and use iOS data protection that allows access after the first unlock following a restart. Twofold has no iCloud sync of its own. Preferences and other eligible app data may be included in ordinary device backups, depending on your Apple and device settings.</p>
+        </section>
+
+        <section aria-labelledby="location">
+          <h2 id="location">Location</h2>
+          <p>Location permission is optional. Twofold asks for it only when you tap <strong>Use my location</strong>, and then requests a single approximate location while the app is in use. The app rounds the coordinates to two decimal places (roughly 1 km) before saving them, requesting weather, or asking Apple for the place name. Twofold never requests background location, and widgets never request device location.</p>
+          <p>You can use the app without location permission by searching for a city. Selecting any city still sends that city's rounded coordinates to weather providers, so denying location access does not stop all location-related requests. Rounding does not make a network request anonymous.</p>
+        </section>
+
+        <section aria-labelledby="search">
+          <h2 id="search">City search</h2>
+          <p>Search text between 3 and 100 characters is sent to Open-Meteo's geocoding service after a short typing pause, before you press Search. The text is part of the request address, so it can appear in the provider's server logs. Twofold keeps no search-history list, but search responses may be cached on the device.</p>
+        </section>
+
+        <section aria-labelledby="services">
+          <h2 id="services">Services that receive requests</h2>
+          <p>Each service below receives your IP address and normal HTTP request information, such as the request time and address, in addition to what is listed.</p>
+          <div class="table-wrap">
+            <table>
+              <caption>Third-party services contacted by Twofold</caption>
+              <thead>
+                <tr><th scope="col">Service</th><th scope="col">What it receives</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Open-Meteo</th>
+                  <td>Rounded coordinates for forecasts and current conditions, and the text you enter in city search. Its <a href="https://open-meteo.com/en/terms#privacy">privacy policy</a> says web-server logs may contain IP addresses and coordinates and are deleted after 90 days.</td>
+                </tr>
+                <tr>
+                  <th scope="row">CAMS via Open-Meteo</th>
+                  <td>Air quality and pollen come from Copernicus Atmosphere Monitoring Service (CAMS) models, requested from Open-Meteo's air quality service with the same rounded coordinates. Twofold does not contact CAMS directly.</td>
+                </tr>
+                <tr>
+                  <th scope="row">National Weather Service (NWS)</th>
+                  <td>For supported US locations and territories: rounded coordinates, and requests for nearby stations, observations and alerts. See the <a href="https://www.weather.gov/privacy">NWS privacy policy</a>.</td>
+                </tr>
+                <tr>
+                  <th scope="row">RainViewer</th>
+                  <td>When the Rain radar layer is shown: the radar frame list and map tiles for the area you view. Tiles are never finer than zoom level 7 (about 300 km across at the equator), so they reveal that area coarsely. The map starts centred on the selected city. Requests carry iOS's default User-Agent with the app name and version, but no city names, search text or identifiers. See the <a href="https://www.rainviewer.com/privacy.html">RainViewer privacy notice</a>.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Apple Maps</th>
+                  <td>Rounded coordinates for finding a place name after Use my location, and map-area requests when you use the map. See <a href="https://www.apple.com/legal/privacy/data/en/apple-maps/">Apple Maps privacy</a> and <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Weather requests use HTTPS, store no cookies or credentials, and send a fixed app User-Agent that includes the developer's support email. They carry no user or device identifier. Radar requests use a separate HTTPS session that also stores no cookies or credentials.</p>
+          <p>Opening an external link, such as NWS radar or a provider page, uses your browser and that website's own privacy practices.</p>
+        </section>
+
+        <section aria-labelledby="widgets">
+          <h2 id="widgets">Widgets and the App Group</h2>
+          <p>The app and its widget extension share a local App Group container on the device. It holds a bounded copy of saved places, the selected city, temperature order, and weather for widgets (up to 48 forecast hours per city, and at most 2 MiB of shared weather). WidgetKit also keeps each widget's city choice and rendered timeline.</p>
+          <p>Installed widgets can request weather for saved cities while the app is closed, using the same providers, rounded coordinates and request limits. iOS decides when they update. Widget city names and weather are marked privacy-sensitive, so iOS can hide them when the device is locked.</p>
+        </section>
+
+        <section aria-labelledby="notifications">
+          <h2 id="notifications">Notifications are local</h2>
+          <p>Forecast alerts are planned on the device from saved forecasts and scheduled with iOS as local notifications. No server sends them, and alert rules and settings are never sent anywhere. Twofold does not register for push notifications.</p>
+        </section>
+
+        <section aria-labelledby="no-tracking">
+          <h2 id="no-tracking">No tracking, ads, analytics, or accounts</h2>
+          <p>Twofold has no sign-in, advertising, analytics or crash-reporting service, and no tracking across other companies' apps or websites. It does not use an advertising identifier and does not sell or share personal data for advertising. Apple may process App Store and device diagnostics under your Apple settings and Apple's policies.</p>
+        </section>
+
+        <section aria-labelledby="children">
+          <h2 id="children">Children</h2>
+          <p>Twofold is a general-audience weather app. It has no accounts and does not knowingly collect personal information from children, or from anyone, on a developer-operated server. The provider requests described above work the same way for every user.</p>
+        </section>
+
+        <section aria-labelledby="deletion">
+          <h2 id="deletion">Your controls and deletion</h2>
+          <ol>
+            <li>In <strong>Your places</strong>, swipe a saved city to remove it, or use <strong>Edit</strong>. This removes the place, its saved snapshot and any alerts set for that city only, and asks widgets to reload. The separate HTTP response and radar tile caches are not erased immediately.</li>
+            <li>Delete forecast alerts in <strong>About &amp; settings &rarr; Weather alerts</strong>, or turn notifications off in iOS <strong>Settings &rarr; Notifications &rarr; Twofold</strong>.</li>
+            <li>Change location access in iOS <strong>Settings &rarr; Privacy &amp; Security &rarr; Location Services &rarr; Twofold</strong>. Turning it off does not delete saved places or stop weather requests for them.</li>
+            <li>To remove all local preferences, alerts, snapshots, widget data and caches, delete the app. Offloading the app keeps its data. There is no in-app clear-all control.</li>
+          </ol>
+          <p>Deleting a place or the app does not delete records already held by providers, support emails, or existing device backups. Provider retention follows their linked policies.</p>
+        </section>
+
+        <section aria-labelledby="support-messages">
+          <h2 id="support-messages">Support email</h2>
+          <p>If you email <a href="mailto:aagrawal207@gmail.com">aagrawal207@gmail.com</a>, the developer receives your email address, message and any attachments, and uses them only to respond to your request. Email is handled by the email providers involved and may remain in their mailboxes and backups. Sending email is voluntary; the app never sends reports or diagnostics on its own. You can ask for deletion of support correspondence held by the developer at the same address.</p>
+        </section>
+
+        <section aria-labelledby="website">
+          <h2 id="website">This website</h2>
+          <p>This site is static HTML and CSS, with no JavaScript, analytics, cookies, forms, third-party embeds, or externally hosted fonts. It is hosted on GitHub Pages. GitHub may process request information such as your IP address, browser details, requested page and request time to deliver and protect the site. See <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.</p>
+        </section>
+
+        <section aria-labelledby="contact">
+          <h2 id="contact">Changes and contact</h2>
+          <p>If Twofold's data practices change, this policy will be updated with a new date. Privacy questions can be sent to Abhishek Agrawal at <a href="mailto:aagrawal207@gmail.com">aagrawal207@gmail.com</a>. App help is on the <a href="support.html">support page</a>.</p>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer shell">
+    <p>Twofold Weather <span aria-hidden="true">/</span> <small>&copy; 2026 Abhishek Agrawal</small></p>
+    <nav aria-label="Footer navigation"><a href="index.html">Home</a><a href="support.html">Help &amp; contact</a></nav>
+  </footer>
+</body>
+</html>
