@@ -52,7 +52,7 @@
             <li><strong>Forecast alerts:</strong> your alert rules (kind, threshold, city, lead time, on or off) and a record of each planned notification's forecast time.</li>
             <li><strong>Saved weather:</strong> last-good weather snapshots, stored as JSON in the app's cache. When the app restores them, it ignores snapshots older than 48 hours and snapshots for places no longer saved. This is a freshness filter, not a guarantee that every cached file is deleted on schedule.</li>
             <li><strong>HTTP responses:</strong> a response cache of up to 64 MiB, shared with the widgets. It can hold weather, alerts and city-search results, including place names and coordinates returned by providers, until cache pruning or app deletion.</li>
-            <li><strong>Radar tiles:</strong> RainViewer images, in a separate private cache of up to 64 MB. Their tile coordinates reflect map areas you viewed.</li>
+            <li><strong>Radar tiles:</strong> RainViewer images, in a separate private cache of up to 64 MB. Their tile coordinates reflect map areas you viewed and the areas around cities whose forecasts you viewed.</li>
             <li><strong>Request-limit state:</strong> request times, costs and provider cooldowns, so limits apply to the app and widgets together. This state does not record city names or search text.</li>
           </ul>
           <p>Local diagnostic counters and system logs record provider names, request outcomes and durations, cache use, and errors. Twofold's diagnostic messages do not include city names, coordinates, IP addresses, or full request URLs, and they are not sent to the developer.</p>
@@ -94,7 +94,7 @@
                 </tr>
                 <tr>
                   <th scope="row">RainViewer</th>
-                  <td>When the Rain radar layer is shown: the radar frame list and map tiles for the area you view. Tiles are never finer than zoom level 7 (about 300 km across at the equator), so they reveal that area coarsely. The map starts centred on the selected city. Requests carry iOS's default User-Agent with the app name and version, but no city names, search text or identifiers. See the <a href="https://www.rainviewer.com/privacy.html">RainViewer privacy notice</a>.</td>
+                  <td>When the Rain radar layer is shown: the radar frame list and map tiles for the area you view. When you view a city's forecast in the app, Twofold may also load the frame list and the latest radar image for about 600 by 750 km around that city, so the map opens with radar already drawn. This happens at most once every 10 minutes per city, only while the app is open, and not in Low Power Mode, in Low Data Mode, or on cellular or other expensive networks. Tiles are never finer than zoom level 7 (about 300 km across at the equator), so they reveal an area coarsely. The map starts centred on the selected city. Requests carry iOS's default User-Agent with the app name and version, but no city names, search text or identifiers. See the <a href="https://www.rainviewer.com/privacy.html">RainViewer privacy notice</a>.</td>
                 </tr>
                 <tr>
                   <th scope="row">Apple Maps</th>
