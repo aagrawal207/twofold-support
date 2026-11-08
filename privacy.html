@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eef4f8">
-  <meta name="description" content="Twofold Weather's privacy policy: on-device storage, optional approximate location, the weather, radar and map services that receive requests, local forecast alerts, and no accounts, ads, tracking, or analytics.">
+  <meta name="description" content="Twofold Weather's privacy policy: on-device storage, optional approximate location, the weather, radar and map services that receive requests, the Apple Watch app, local forecast alerts, optional tips through Apple, and no accounts, ads, tracking, or analytics.">
   <title>Privacy Policy | Twofold Weather</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -23,22 +23,24 @@
     <header class="page-heading">
       <p class="eyebrow">Twofold Weather / Privacy</p>
       <h1>Privacy policy.</h1>
-      <p class="lede">Twofold has no account system, advertising, tracking, or analytics service. It does not sell personal data or send app diagnostics to a developer-operated server. Weather, radar and map providers still receive the information needed to answer each request.</p>
-      <p class="small-note">Last updated: 27 September 2026. This policy covers the Twofold Weather app for iPhone and iPad, its widgets, and this support website, provided by Abhishek Agrawal.</p>
+      <p class="lede">Twofold has no account system, advertising, or analytics service. Optional tips are In-App Purchases handled by Apple. Twofold does not sell personal data or send app diagnostics to a developer-operated server. Weather providers, RainViewer, and Apple's location and map services still receive the information needed to answer each request.</p>
+      <p class="small-note">Last updated: 7 November 2026. This revision adds the airport observations and Canadian alerts in version 1.4. This policy covers the Twofold Weather app for iPhone and iPad, its widgets, its Apple Watch app and complications, and this support website, provided by Abhishek Agrawal.</p>
     </header>
 
     <div class="reading-grid">
       <nav class="page-nav" aria-label="Privacy sections">
         <p class="eyebrow">In this policy</p>
         <a href="#on-device">On-device data</a>
+        <a href="#watch">Apple Watch</a>
         <a href="#location">Location</a>
         <a href="#search">City search</a>
         <a href="#services">Services</a>
         <a href="#widgets">Widgets</a>
         <a href="#notifications">Notifications</a>
+        <a href="#deletion">Your controls</a>
+        <a href="#tips">Tips and ratings</a>
         <a href="#no-tracking">No tracking</a>
         <a href="#children">Children</a>
-        <a href="#deletion">Your controls</a>
         <a href="#support-messages">Support email</a>
         <a href="#website">This website</a>
         <a href="#contact">Changes &amp; contact</a>
@@ -48,26 +50,39 @@
         <section aria-labelledby="on-device">
           <h2 id="on-device">Data stored on your device</h2>
           <ul>
-            <li><strong>Saved places and preferences:</strong> city names, region and country, coordinates rounded to two decimal places, time zones, the selected city, list order, temperature order, layouts, card size, and the focused reading's scale and type. These are kept in the app's preferences (<code>UserDefaults</code>).</li>
-            <li><strong>Forecast alerts:</strong> your alert rules (kind, threshold, city, lead time, on or off) and a record of each planned notification's forecast time.</li>
-            <li><strong>Saved weather:</strong> last-good weather snapshots, stored as JSON in the app's cache. When the app restores them, it ignores snapshots older than 48 hours and snapshots for places no longer saved. This is a freshness filter, not a guarantee that every cached file is deleted on schedule.</li>
-            <li><strong>HTTP responses:</strong> a response cache of up to 64 MiB, shared with the widgets. It can hold weather, alerts and city-search results, including place names and coordinates returned by providers, until cache pruning or app deletion.</li>
-            <li><strong>Radar tiles:</strong> RainViewer images, in a separate private cache of up to 64 MB. Their tile coordinates reflect map areas you viewed and the areas around cities whose forecasts you viewed.</li>
-            <li><strong>Request-limit state:</strong> request times, costs and provider cooldowns, so limits apply to the app and widgets together. This state does not record city names or search text.</li>
+            <li><strong>Saved places and preferences:</strong> city names, region and country, coordinates rounded to two decimal places, time zones, the selected city, list order, temperature order, home and top-card layouts, the card size (Detailed or Compact), and the focused reading's scale and type. These are kept in the app's preferences (<code>UserDefaults</code>).</li>
+            <li><strong>Forecast alerts:</strong> your alert rules (kind, threshold, city, lead time, on or off), a record of each planned notification's forecast time, the optional official-alert notification setting, and the ids of NWS and Environment Canada alerts already notified for each city. These are kept in the app's preferences.</li>
+            <li><strong>Saved weather:</strong> last-good weather snapshots, stored as JSON in the app's cache directory. When the app restores them, it ignores snapshots older than 48 hours and snapshots for places no longer saved. This is a freshness filter, not a guarantee that every cached file is deleted on schedule.</li>
+            <li><strong>Past week:</strong> for each saved city, up to 14 days of past high and low temperatures and the forecasts for them, plus the high and low Twofold showed you the day before. They are stored in the app's private Application Support directory (<code>TwofoldHistory-v1</code>) with the city's rounded coordinates. They are excluded from device backups and are not shared with widgets. Removing a city deletes its history.</li>
+            <li><strong>Widget state:</strong> a bounded copy of saved places and weather in a local App Group container shared with the widgets. See <a href="#widgets">Widgets and the App Group</a>.</li>
+            <li><strong>HTTP responses:</strong> a separate response cache with a 64 MiB disk budget, shared with the widget extension. It can hold weather, alerts and city-search results, including place names and coordinates returned by providers. These files can remain until cache pruning or app deletion, even after their freshness period ends. Older private cache files can remain after an upgrade.</li>
+            <li><strong>Radar tiles:</strong> RainViewer radar images, in a separate cache in the app's private caches directory with a 64 MB disk budget. Their tile coordinates reflect map areas you viewed and the areas around cities whose forecasts you viewed. They remain until cache pruning or iOS removes them, or the app is deleted.</li>
+            <li><strong>Use and prompts:</strong> the days you opened Twofold with weather on screen (as calendar days, not times or places), your longest run of days in a row, how many visits showed fresh weather for a while, when Twofold last asked for a rating (with the app version) or showed the tip card, and whether you have tipped. These are kept in the app's preferences, are never sent anywhere, and only decide when to ask.</li>
+            <li><strong>Tips:</strong> the ids of tip transactions this device has received, so a tip is thanked and counted once. Nothing else about a purchase is stored.</li>
+            <li><strong>Request-limit state:</strong> request times, weighted costs and provider cooldowns, shared locally so limits survive relaunches and apply to app and widget requests together. Existing private limit state is imported once. This state does not record city names or search text.</li>
           </ul>
-          <p>Local diagnostic counters and system logs record provider names, request outcomes and durations, cache use, and errors. Twofold's diagnostic messages do not include city names, coordinates, IP addresses, or full request URLs, and they are not sent to the developer.</p>
-          <p>The shared weather cache and request-limit files are excluded from device backups and use iOS data protection that allows access after the first unlock following a restart. Twofold has no iCloud sync of its own. Preferences and other eligible app data may be included in ordinary device backups, depending on your Apple and device settings.</p>
+          <p>Local diagnostic counters and system logs record provider names, request outcomes and durations, cache use, and errors such as a failed refresh or cache write. Twofold's diagnostic messages do not include city names, coordinates, IP addresses, or full request URLs.</p>
+          <p>The shared weather cache and request-limit directories are excluded from device backups. Shared files use iOS data protection that allows access after the first unlock following a restart. Twofold has no iCloud sync of its own. Preferences and other eligible app data may be included in ordinary device backups, depending on your Apple and device settings.</p>
+        </section>
+
+        <section aria-labelledby="watch">
+          <h2 id="watch">Apple Watch</h2>
+          <p>If the Twofold watch app is installed, the iPhone sends it your saved places (including My location's rounded coordinates and place name), the selected city, a trimmed copy of each city's weather (current reading, 12 hours and 10 days; no alerts), and your temperature order, voice, Roast opt-in, card style and accent. The transfer uses Apple's WatchConnectivity between your own paired devices. No Twofold server is involved.</p>
+          <p>The watch keeps the latest copy in its own App Group container, shared only with its complications, and replaces it on every transfer. The watch app never asks for or uses location.</p>
+          <p>When the iPhone's copy of the city on screen is more than 45 minutes old, the open watch app requests that city's weather from Open-Meteo (and NWS for US places) itself. It uses the same rounded coordinates, its own request limits and cache, and makes no air-quality request. Watch complications show the selected city's name and weather from the saved copy and make no requests. Deleting the watch app removes its copy.</p>
         </section>
 
         <section aria-labelledby="location">
           <h2 id="location">Location</h2>
-          <p>Location permission is optional. Twofold asks for it only when you tap <strong>Use my location</strong>, and then requests a single approximate location while the app is in use. The app rounds the coordinates to two decimal places (roughly 1 km) before saving them, requesting weather, or asking Apple for the place name. Twofold never requests background location, and widgets never request device location.</p>
-          <p>You can use the app without location permission by searching for a city. Selecting any city still sends that city's rounded coordinates to weather providers, so denying location access does not stop all location-related requests. Rounding does not make a network request anonymous.</p>
+          <p>Location permission is optional. Twofold asks for it only when you choose <strong>Add My location</strong> or <strong>Update my location</strong>, and then requests a one-time, approximate location while the app is in use.</p>
+          <p>While <strong>Follow my location</strong> is on (the default), each time the app comes to the foreground it requests one approximate location if permission is already granted, and adds or updates My location. It opens on My location after a cold launch, after 15 minutes away, or when you have travelled 10 km or more. With the setting off, the same check runs only while My location is saved, and the selected city never changes.</p>
+          <p>Twofold never asks for permission on its own and uses location only while the app is open. The app rounds the returned coordinates to two decimal places before saving them, requesting weather, or asking Apple to find a place name. It does not request background location updates. Widgets and the watch app never request device location.</p>
+          <p>You can use the app without location permission by choosing a city yourself. Selecting any city still sends that city's rounded coordinates to weather providers, so denying location access does not stop all location-related network requests. Rounding does not make a network request anonymous.</p>
         </section>
 
         <section aria-labelledby="search">
           <h2 id="search">City search</h2>
-          <p>Search text between 3 and 100 characters is sent to Open-Meteo's geocoding service after a short typing pause, before you press Search. The text is part of the request address, so it can appear in the provider's server logs. Twofold keeps no search-history list, but search responses may be cached on the device.</p>
+          <p>Search text between 3 and 100 characters can be sent to Open-Meteo after a short typing pause, before you press the keyboard's Search button. The text is part of the request address, so the provider receives it and it can appear in the provider's logs. Twofold keeps no search-history list, but search responses may be cached on the device.</p>
         </section>
 
         <section aria-labelledby="services">
@@ -82,71 +97,82 @@
               <tbody>
                 <tr>
                   <th scope="row">Open-Meteo</th>
-                  <td>Rounded coordinates for forecasts and current conditions, and the text you enter in city search. Its <a href="https://open-meteo.com/en/terms#privacy">privacy policy</a> says web-server logs may contain IP addresses and coordinates and are deleted after 90 days.</td>
-                </tr>
-                <tr>
-                  <th scope="row">CAMS via Open-Meteo</th>
-                  <td>Air quality and pollen come from Copernicus Atmosphere Monitoring Service (CAMS) models, requested from Open-Meteo's air quality service with the same rounded coordinates. Twofold does not contact CAMS directly.</td>
+                  <td>Rounded coordinates for weather; for the past week, through its Previous Runs service at <code>previous-runs-api.open-meteo.com</code>, only when you view the Past week card or page, at most about once a day per city; and for air quality and pollen, which come from Copernicus Atmosphere Monitoring Service (CAMS) models requested from Open-Meteo (Twofold does not contact CAMS directly). It also receives the text you enter in city search. Its free-service <a href="https://open-meteo.com/en/terms#privacy">privacy policy</a> says web-server logs may contain IP addresses and geographical coordinates and are deleted after 90 days. Search text in request addresses may also appear in provider logs.</td>
                 </tr>
                 <tr>
                   <th scope="row">National Weather Service (NWS)</th>
-                  <td>For supported US locations and territories: rounded coordinates, and requests for nearby stations, observations and alerts. See the <a href="https://www.weather.gov/privacy">NWS privacy policy</a>.</td>
+                  <td>For supported US locations and territories: location coordinates, and requests for stations or alerts. Its <a href="https://www.weather.gov/privacy">privacy policy</a> describes server logging and its own retention practices.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Aviation Weather Center (NOAA)</th>
+                  <td>For saved places outside NWS coverage: a rectangle about 50 km across around the city's rounded coordinates. The app and widgets use it to find nearby airport observations; the watch does not request it. Replies are cached for 10 minutes. See the <a href="https://www.weather.gov/privacy">NWS privacy policy</a>.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Environment and Climate Change Canada (MSC GeoMet)</th>
+                  <td>For saved Canadian cities when the app refreshes in the foreground: a small area around the city's rounded coordinates, to find weather alerts. Replies are cached for five minutes. Widgets and the watch do not request these alerts. See the <a href="https://www.canada.ca/en/transparency/privacy.html">Government of Canada privacy notice</a>.</td>
                 </tr>
                 <tr>
                   <th scope="row">RainViewer</th>
-                  <td>When the Rain radar layer is shown: the radar frame list and map tiles for the area you view. When you view a city's forecast in the app, Twofold may also load the frame list and the latest radar image for about 600 by 750 km around that city, so the map opens with radar already drawn. This happens at most once every 10 minutes per city, only while the app is open, and not in Low Power Mode, in Low Data Mode, or on cellular or other expensive networks. Tiles are never finer than zoom level 7 (about 300 km across at the equator), so they reveal an area coarsely. The map starts centred on the selected city. Requests carry iOS's default User-Agent with the app name and version, but no city names, search text or identifiers. See the <a href="https://www.rainviewer.com/privacy.html">RainViewer privacy notice</a>.</td>
+                  <td>When the Rain radar map layer is shown: the radar frame list and map tiles for the area you view. When you view a city's forecast in the app, Twofold may also load the frame list and the latest radar image for about 600 by 750 km around that city, so the map opens with radar already drawn. This happens at most once every 10 minutes per city, only while the app is open, and not in Low Power Mode, in Low Data Mode, or on cellular or other expensive networks. Tiles are never finer than zoom level 7 (about 300 km across at the equator), so they reveal an area coarsely. The map starts centred on the selected city. Requests carry iOS's default User-Agent with the app name and version, but no city names, search text or identifiers are added. See the <a href="https://www.rainviewer.com/privacy.html">RainViewer privacy notice</a>.</td>
                 </tr>
                 <tr>
-                  <th scope="row">Apple Maps</th>
-                  <td>Rounded coordinates for finding a place name after Use my location, and map-area requests when you use the map. See <a href="https://www.apple.com/legal/privacy/data/en/apple-maps/">Apple Maps privacy</a> and <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>.</td>
+                  <th scope="row">Apple</th>
+                  <td>Rounded coordinates for finding a place name after a location request, and map-area requests when you use the native MapKit map. Apple processes related network information under its <a href="https://www.apple.com/legal/privacy/data/en/apple-maps/">Maps privacy notice</a> and <a href="https://www.apple.com/legal/privacy/">privacy policy</a>.</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <p>Weather requests use HTTPS, store no cookies or credentials, and send a fixed app User-Agent that includes the developer's support email. They carry no user or device identifier. Radar requests use a separate HTTPS session that also stores no cookies or credentials.</p>
+          <p>Weather requests use HTTPS, keep no cookies or account credentials, and send a fixed app User-Agent that includes the developer's support contact. They carry no user or device identifier. Radar requests use HTTPS and a separate session that also stores no cookies or credentials.</p>
           <p>Opening an external link, such as NWS radar or a provider page, uses your browser and that website's own privacy practices.</p>
         </section>
 
         <section aria-labelledby="widgets">
           <h2 id="widgets">Widgets and the App Group</h2>
-          <p>The app and its widget extension share a local App Group container on the device. It holds a bounded copy of saved places, the selected city, temperature order, and weather for widgets (up to 48 forecast hours per city, and at most 2 MiB of shared weather). WidgetKit also keeps each widget's city choice and rendered timeline.</p>
-          <p>Installed widgets can request weather for saved cities while the app is closed, using the same providers, rounded coordinates and request limits. iOS decides when they update. Widget city names and weather are marked privacy-sensitive, so iOS can hide them when the device is locked.</p>
+          <p>The app and its widget extension share a local App Group container on the device. It holds a bounded copy of saved places, the selected city, temperature order, and weather for widgets, including up to 48 forecast hours per city. Shared weather storage is limited to 2 MiB. WidgetKit also keeps each widget's city choice and rendered timeline.</p>
+          <p>Installed widgets can request weather for saved cities while the app is closed, using the same providers, saved rounded coordinates and local request limits. WidgetKit decides when they update. Home Screen and Lock Screen widgets show the saved city's name and weather. These fields are marked privacy-sensitive, and iOS controls whether they are hidden when the device is locked.</p>
         </section>
 
         <section aria-labelledby="notifications">
           <h2 id="notifications">Notifications are local</h2>
-          <p>Forecast alerts are planned on the device from saved forecasts and scheduled with iOS as local notifications. No server sends them, and alert rules and settings are never sent anywhere. Twofold does not register for push notifications.</p>
-        </section>
-
-        <section aria-labelledby="no-tracking">
-          <h2 id="no-tracking">No tracking, ads, analytics, or accounts</h2>
-          <p>Twofold has no sign-in, advertising, analytics or crash-reporting service, and no tracking across other companies' apps or websites. It does not use an advertising identifier and does not sell or share personal data for advertising. Apple may process App Store and device diagnostics under your Apple settings and Apple's policies.</p>
-        </section>
-
-        <section aria-labelledby="children">
-          <h2 id="children">Children</h2>
-          <p>Twofold is a general-audience weather app. It has no accounts and does not knowingly collect personal information from children, or from anyone, on a developer-operated server. The provider requests described above work the same way for every user.</p>
+          <p>Forecast alerts are scheduled with iOS as local notifications on the device. No server sends them, and alert settings are not sent anywhere. Each notification contains the city name, the alert or threshold text and the forecast time. It also carries the saved place's identifier, so a tap can open that city. Twofold does not register for push notifications.</p>
         </section>
 
         <section aria-labelledby="deletion">
           <h2 id="deletion">Your controls and deletion</h2>
           <ol>
-            <li>In <strong>Your places</strong>, swipe a saved city to remove it, or use <strong>Edit</strong>. This removes the place, its saved snapshot and any alerts set for that city only, and asks widgets to reload. The separate HTTP response and radar tile caches are not erased immediately.</li>
+            <li>In <strong>Your places</strong>, swipe a saved city to remove it, or use <strong>Edit</strong>. This removes the place, its app and shared snapshot, its past-week history and any alerts set for that city only, and asks widgets to reload. iOS controls when an existing widget display updates. The separate HTTP response and radar tile caches are not erased immediately.</li>
             <li>Delete forecast alerts in <strong>About &amp; settings &rarr; Forecast alerts</strong>, or turn notifications off in iOS <strong>Settings &rarr; Notifications &rarr; Twofold</strong>.</li>
+            <li>Change display preferences or background motion through the pages in <strong>About &amp; settings</strong>. Edit a widget to choose its city, or remove it through the Home Screen or Lock Screen editor.</li>
             <li>Change location access in iOS <strong>Settings &rarr; Privacy &amp; Security &rarr; Location Services &rarr; Twofold</strong>. Turning it off does not delete saved places or stop weather requests for them.</li>
-            <li>To remove all local preferences, alerts, snapshots, widget data and caches, delete the app. Offloading the app keeps its data. There is no in-app clear-all control.</li>
+            <li>To remove the app's local preferences, alert rules, snapshots, past-week history, shared widget data, HTTP cache and radar tiles, delete the app. Offloading the app keeps its documents and data. There is no in-app clear-all control. Deleting the watch app removes the watch's copy.</li>
           </ol>
-          <p>Deleting a place or the app does not delete records already held by providers, support emails, or existing device backups. Provider retention follows their linked policies.</p>
+          <p>Deleting a place or the app does not delete records already held by providers, support emails, or existing device backups. Provider retention follows their linked policies. Backup controls belong to your device and Apple Account settings.</p>
+        </section>
+
+        <section aria-labelledby="tips">
+          <h2 id="tips">Tips and ratings</h2>
+          <p>Tips are optional consumable In-App Purchases. They unlock nothing. Apple processes the purchase, payment and any Ask to Buy approval under its own <a href="https://www.apple.com/legal/privacy/">privacy policy</a>. Twofold receives only the App Store's signed transaction on the device and never sees your name, Apple Account or payment details. No purchase information is sent to the developer or any other service. Apple's sales reports to the developer are aggregated and do not identify you.</p>
+          <p>Twofold may ask once in a while for an App Store rating using Apple's standard prompt, which iOS limits. Ratings and reviews are handled by Apple.</p>
+        </section>
+
+        <section aria-labelledby="no-tracking">
+          <h2 id="no-tracking">No tracking, ads, analytics, or accounts</h2>
+          <p>Twofold has no sign-in, advertising, analytics or crash-reporting service, and does not track you across other companies' apps or websites. It does not use an advertising identifier. Apple may process App Store and device diagnostics under your Apple settings and Apple's policies.</p>
+        </section>
+
+        <section aria-labelledby="children">
+          <h2 id="children">Children</h2>
+          <p>Twofold is a general-audience weather app. It has no accounts and does not knowingly collect personal information from children, or from anyone, on a developer-operated server.</p>
         </section>
 
         <section aria-labelledby="support-messages">
           <h2 id="support-messages">Support email</h2>
-          <p>If you email <a href="mailto:aagrawal207@gmail.com">aagrawal207@gmail.com</a>, the developer receives your email address, message and any attachments, and uses them only to respond to your request. Email is handled by the email providers involved and may remain in their mailboxes and backups. Sending email is voluntary; the app never sends reports or diagnostics on its own. You can ask for deletion of support correspondence held by the developer at the same address.</p>
+          <p>If you email <a href="mailto:aagrawal207@gmail.com">aagrawal207@gmail.com</a>, your email address, message and any attachments are handled by the email services involved and used to respond to your request. Sending support email is voluntary. Use the same address for privacy questions or requests about support correspondence.</p>
         </section>
 
         <section aria-labelledby="website">
           <h2 id="website">This website</h2>
-          <p>This site is static HTML and CSS, with no JavaScript, analytics, cookies, forms, third-party embeds, or externally hosted fonts. It is hosted on GitHub Pages. GitHub may process request information such as your IP address, browser details, requested page and request time to deliver and protect the site. See <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.</p>
+          <p>This site is static HTML and CSS, with no JavaScript, analytics, cookies, forms, or third-party embeds. It is hosted on GitHub Pages. GitHub may process request information such as your IP address, browser details, requested page and request time to deliver and protect the site, as described in <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.</p>
         </section>
 
         <section aria-labelledby="contact">
