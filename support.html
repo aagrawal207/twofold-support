@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eef4f8">
-  <meta name="description" content="Help with Twofold Weather: temperature units, layouts, cities, refreshing, widgets, rain radar, forecast alerts, data sources, deleting data, and contacting the developer.">
+  <meta name="description" content="Help with Twofold Weather: getting around, temperature units, the cards on Today and Details, the Week and the Briefing, cities, widgets, the rain Live Activity, forecast alerts, data sources, deleting data, and contacting the developer.">
   <title>Support | Twofold Weather</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -24,7 +24,7 @@
       <p class="eyebrow">Twofold Weather / Help</p>
       <h1>Support.</h1>
       <p class="lede">Answers to common questions, and how to reach the developer if something is not working.</p>
-      <p class="small-note">For iPhone and iPad with iOS 18 or later. Support is also linked from <strong>About &amp; settings &rarr; Support</strong> in the app.</p>
+      <p class="small-note">For iPhone and iPad with iOS 18 or later, with an Apple Watch app. Support is also linked from <strong>Settings &rarr; Help &amp; feedback</strong> in the app. In these answers, <strong>Settings</strong> means Twofold's own settings, behind the gear at the top right of every section. iOS settings are named as such.</p>
     </header>
 
     <div class="reading-grid">
@@ -33,7 +33,6 @@
         <a href="#contact">Contact</a>
         <a href="#using">Using the app</a>
         <a href="#readings">Readings &amp; sources</a>
-        <a href="#radar">Radar</a>
         <a href="#alerts">Alerts</a>
         <a href="#data">Your data</a>
       </nav>
@@ -50,45 +49,224 @@
         <section class="faq" aria-labelledby="using">
           <h2 id="using">Using the app</h2>
           <details>
+            <summary>How do I get around the app?</summary>
+            <p>The bar at the bottom holds four sections: <strong>Today</strong>, <strong>Week</strong>, <strong>Briefing</strong> and <strong>Details</strong>. Tap one, or flick sideways on a section to move to the next one. After dark in the selected city the first section reads <strong>Tonight</strong>; it is the same page. The round button beside the bar switches cities (see below).</p>
+            <p>The top of every section shows the selected city as a large heading, with its region and local time beneath; an arrow marks My location. Tap the city name to open <strong>Cities</strong>. At the top right, the round arrow refreshes the weather and the gear opens <strong>Settings</strong>.</p>
+            <p>Twofold draws no scroll bars. A page that is longer than the screen still scrolls, and stops at its ends without a bounce. No page refreshes on a pull (see the next question).</p>
+          </details>
+          <details>
+            <summary>How do I refresh the weather?</summary>
+            <p>Tap the round arrow at the top right of any section, left of the gear. It turns into a spinner while the selected city refreshes. With a hardware keyboard, Command-R does the same.</p>
+            <p>Pulling a page down does not refresh it. A swipe down brings something in instead: tonight's Moon on Today, yesterday on the Week, Activities on the Briefing and what each reading means on Details.</p>
+            <p>Twofold also refreshes the selected city when it comes to the foreground and when you choose a city. When a page shows saved weather, the note at its foot has its own <strong>Refresh</strong> button.</p>
+          </details>
+          <details>
+            <summary>Where did the Layout, Voice, Temperature and Widgets settings go?</summary>
+            <p>Layout, Voice and Temperature are one page: <strong>Settings &rarr; Layout and voice</strong>. From top to bottom it holds the scales, the cards, the current weather layout, the card size and the voice.</p>
+            <p>The page no longer offers a choice between Dashboard and Reading list. The measurements always stand as a grid of tiles.</p>
+            <p>There is no Widgets page. Widgets are added and edited on the Home Screen and the Lock Screen (see the widget questions below). If widgets cannot share weather with the app on your device, <strong>Settings &rarr; Help &amp; feedback</strong> says so.</p>
+            <p>Today has no <strong>Weather data and sources</strong> button at its foot. The same page is <strong>Settings &rarr; Weather sources</strong>.</p>
+          </details>
+          <details>
             <summary>How do I change temperature units?</summary>
-            <p>Open <strong>About &amp; settings &rarr; Temperature &rarr; First temperature scale</strong> and choose Celsius or Fahrenheit first. Paired readings and widgets follow this order.</p>
-            <p>For one large reading, choose <strong>Tap to switch</strong> from the grid button. Use the &deg;C/&deg;F and Actual/Feels like controls, or tap the temperature to switch scales. These choices are saved separately from the paired order.</p>
+            <p>Open <strong>Settings &rarr; Layout and voice</strong>. <strong>Scales</strong>, at the top of the page, has four choices: <strong>Celsius first</strong>, <strong>Fahrenheit first</strong>, <strong>Celsius only</strong> and <strong>Fahrenheit only</strong>. Both scales stay the default. The app, the widgets and the Apple Watch app follow the choice. Missing readings are shown as unavailable.</p>
+            <p>For one large reading, choose <strong>Tap to switch</strong> under <strong>Current weather</strong> on the same page. Use the &deg;C/&deg;F and Actual/Feels like controls on the page, or tap the temperature to switch scales. These choices are saved independently of Scales.</p>
+          </details>
+          <details>
+            <summary>Can I show only Celsius or only Fahrenheit?</summary>
+            <p>Yes. Open <strong>Settings &rarr; Layout and voice</strong> and, under <strong>Scales</strong>, choose <strong>Celsius only</strong> or <strong>Fahrenheit only</strong>. Every temperature in the app, in the widgets and on the Apple Watch is then one value. The intro offers the same four choices on its style page. To have both scales again, choose <strong>Celsius first</strong> or <strong>Fahrenheit first</strong>.</p>
+            <p>Feels like takes the place where the second scale stood. The current reading always shows it there. An hour or a day shows it, as &ldquo;Feels 5&deg;&rdquo;, only when feels like is 2&deg;C (3.6&deg;F) or more from the temperature; otherwise that place stays empty and the row keeps its height.</p>
+            <p>Only temperatures follow the choice. Wind, rain, pressure and visibility keep both of their units.</p>
+            <p>Two current weather layouts change with one scale. The Table needs both scales, so it is not offered; if you had chosen it, the reading is drawn as Side by side until both scales are back. Tap to switch has no &deg;C/&deg;F control, and a tap on the temperature switches between actual and feels like.</p>
           </details>
           <details>
             <summary>Why doesn't the Fahrenheit value match converting the Celsius one?</summary>
-            <p>Each pair is rounded separately from the same exact value, so converting the rounded number in your head can land one degree away. A feels-like difference of 1.6&deg;C, for example, shows as "2&deg;C / 3&deg;F" (1.6&deg;C is 2.9&deg;F), while converting the rounded 2&deg;C would give 4&deg;F. Both figures are correct to the nearest degree; neither is derived from the other's rounded value.</p>
+            <p>Each pair is rounded separately from the same exact value, so converting the rounded number in your head can land one degree away. A feels-like difference of 1.6&deg;C, for example, shows as &ldquo;2&deg;C / 3&deg;F&rdquo; (1.6&deg;C is 2.9&deg;F), while converting the rounded 2&deg;C would give 4&deg;F. Both figures are correct to the nearest degree; neither is derived from the other's rounded value.</p>
           </details>
           <details>
-            <summary>How do I change the layout or simplify a card?</summary>
-            <p>The grid button beside the app name chooses the home layout (Dashboard or Reading list), the current-conditions layout (Side by side, Four readings, By scale or Tap to switch) and the card size. <strong>Compact</strong> cards keep the main reading and become shorter; <strong>Detailed</strong> is the default. Card size is also in <strong>About &amp; settings &rarr; Appearance</strong>.</p>
-            <p>The hourly forecast card's icon buttons swap its hour strip for a 24-hour graph of temperature, rain chance, wind, humidity or UV; the first button brings the strip back. Tap an hour for its actual and feels-like readings.</p>
+            <summary>How do I change the layout or the card size?</summary>
+            <p><strong>Settings &rarr; Layout and voice</strong> holds the choices:</p>
+            <ul>
+              <li><strong>Scales:</strong> both scales in either order, or one alone (see &ldquo;How do I change temperature units?&rdquo;).</li>
+              <li><strong>Cards:</strong> opens the card list (see &ldquo;How do I move, shrink or remove cards?&rdquo;).</li>
+              <li><strong>Current weather:</strong> <strong>Big number</strong> (the default), <strong>Side by side</strong>, <strong>Table</strong>, <strong>Tap to switch</strong> or <strong>Thermometer</strong>, each shown as a small picture (see the next question).</li>
+              <li><strong>Card size:</strong> <strong>Detailed</strong> (the default) or <strong>Compact</strong> for every card at once. Compact cards keep the main reading and become shorter. UV index and Pressure tiles have one size.</li>
+            </ul>
+            <p>With Detailed chosen, the current reading, the Briefing's timeline card and the tiles on Details stay compact, which keeps Today, the Briefing and Details short. Long press one of them and choose <strong>Show details</strong> for the larger card; its page is then longer.</p>
+            <p>A long press on the current reading, the Week card or a Briefing card sets that card's own size; the current reading's menu also offers its layout. Choosing the other card size in Settings drops every size set on a single card. Choosing Detailed makes the current reading, the Briefing's timeline and the tiles compact again.</p>
           </details>
           <details>
-            <summary>How do I change the app icon?</summary>
-            <p>Open <strong>About &amp; settings &rarr; Appearance &rarr; App icon</strong> and tap an icon. Paper is the default; Dawn, Rain, Snow, Night, Storm and Aurora are in the same paper-cut style, and Classic is the original sun and moon. iOS confirms the change with a short message. Paper and Classic also have iOS dark and tinted versions.</p>
+            <summary>What do the current weather layouts look like?</summary>
+            <p><strong>Settings &rarr; Layout and voice</strong> shows a small picture of each layout under <strong>Current weather</strong>; tap one to choose it. The intro shows the same pictures on its style page. The pictures are drawn in your scales from example readings, not from your weather.</p>
+            <ul>
+              <li><strong>Big number</strong> (the default): the temperature in large figures, the other scale under it, then a feels-like line.</li>
+              <li><strong>Side by side:</strong> actual beside feels like.</li>
+              <li><strong>Table:</strong> a row for Actual and a row for Feels like, with a column for each scale.</li>
+              <li><strong>Tap to switch:</strong> one reading at a time, with flat controls on the page for Actual or Feels like and for &deg;C or &deg;F.</li>
+              <li><strong>Thermometer:</strong> the reading on a drawn thermometer, with Celsius marks on one side of the tube and Fahrenheit marks on the other.</li>
+            </ul>
+            <p>With both scales showing, every layout except Tap to switch shows actual and feels like in both. With one scale, Big number sets feels like under the temperature, the Table is not offered and the Thermometer carries one scale's marks (see &ldquo;Can I show only Celsius or only Fahrenheit?&rdquo;).</p>
+            <p>Two names are new in version 1.5. An install that used <strong>Four readings</strong> shows Big number, and <strong>By scale</strong> is now called Table.</p>
           </details>
           <details>
-            <summary>How do I rearrange the home sections?</summary>
-            <p>Choose <strong>Edit sections&hellip;</strong> from the grid button, or <strong>About &amp; settings &rarr; Appearance &rarr; Home sections</strong>. Drag the hourly forecast, 10-day forecast, measurement tiles or Activities by its handle to a new place; the change applies straight away and is saved. With VoiceOver, use the Move up and Move down actions. <strong>Reset to default order</strong> puts Activities back at the end. Current conditions and any alerts always stay at the top.</p>
+            <summary>What is on Today, and what is on Details?</summary>
+            <p><strong>Today</strong> shows the current reading, then one card: the hourly forecast, whose last row shows <strong>Yesterday</strong>'s high and low and opens <strong>Past week</strong>. Official alerts appear under the current reading when there are any, and so does the next-hour line when rain or snow is close. With only that, Today is meant to fit one screen on a 6.3-inch iPhone; an alert, the next-hour line, a larger current reading or more cards make it scroll. A swipe down on Today brings in tonight's Moon (see &ldquo;How do I see the Moon?&rdquo;).</p>
+            <p><strong>Details</strong> holds every other card: UV index first, then Wind, Air quality, Precipitation, Humidity, Visibility, Cloud cover and Pressure. Pollen appears only where it is forecast. Details has no current reading. Its tiles rest compact and stand in columns, two on an iPhone, each tile at its own height, so the page fits one screen where there is no Pollen tile. A swipe down puts a list of what each reading means in the tiles' place (see &ldquo;What do the readings on Details mean?&rdquo;). Tap a tile for more about that measurement.</p>
+            <p>You decide which card is on which page (see &ldquo;How do I move, shrink or remove cards?&rdquo;).</p>
           </details>
           <details>
-            <summary>How do I add, reorder, or remove cities?</summary>
-            <p>Open <strong>Your places</strong> with the list button. Type at least three characters to search, or choose <strong>Use my location</strong>. Twofold saves up to 12 cities. Use <strong>Edit</strong> to reorder them, or swipe a city to remove it. Swipe left or right on the forecast to move between cities.</p>
-            <p>Search works with location permission off. If location access was denied, change it in iOS Location Services settings.</p>
+            <summary>Where are Past week, UV index and the Moon?</summary>
+            <p><strong>Past week</strong> is the last row of the hourly card on Today. It shows yesterday's high and low; tap it for yesterday's weather and how the last seven days of forecasts did. Past week is a card of its own only on Details, or on Today when the hourly card is not there. In <strong>Cards</strong> it is listed under <strong>On Today</strong> as <strong>In the hourly card</strong>; the arrow there sends it to Details.</p>
+            <p><strong>UV index</strong> is the first tile on Details. To have it on Today, long press it and choose <strong>Move to Today</strong>.</p>
+            <p>The <strong>Moon</strong> has no card on Today or Details. It has Today's night side to itself (see the next question).</p>
+          </details>
+          <details>
+            <summary>How do I see the Moon?</summary>
+            <p>Swipe down on Today. Tonight's Moon takes the place of the reading and the cards, on a night sky: a large Moon, the phase's name and how much of it is lit. A smaller Moon stands each side of it: yesterday's and tomorrow's, or the nights before and after the night you chose. The card under it holds the next 30 nights, the day's moonrise and moonset, the next full moon and the next new moon, a line about the Moon in Twofold's voice (unless the voice is Plain) and a note on how it is worked out. Tap a night in the strip for that night's Moon and its moonrise and moonset. A tap on a small Moon chooses its night too, when that night is one of the 30. At the default text size the page fits one screen.</p>
+            <p>Swipe up, or tap the button in the top left corner, to go back to Today. Where Today is taller than the screen, swipe down at its top. The Moon also goes when you choose another city or section. The <strong>Moon phase</strong> widget opens the same page.</p>
+            <p>The page needs no forecast, because the Moon is worked out on the device (see &ldquo;Are sun and moon times exact?&rdquo;). A day's page (tap a day on the Week) still has a <strong>Moon</strong> card; tap it for that day's Moon with the day before and the day after.</p>
+          </details>
+          <details>
+            <summary>What do the readings on Details mean?</summary>
+            <p>Swipe down on Details. One card takes the tiles' place, with a row for each reading on the page, in the same order. A row shows the reading's value, a word for it, such as &ldquo;Gentle breeze&rdquo;, &ldquo;Muggy&rdquo; or &ldquo;Falling fast&rdquo;, and one to three short sentences: first what the reading does to you, then what it does to the weather. Cloud cover at night can read &ldquo;Cloud works like a blanket: the night stays milder than a clear one would.&rdquo; Pressure can read &ldquo;Down 5 hPa / 0.15 inHg since this time yesterday. A steady fall often brings cloud and rain.&rdquo; Tap a row for the same page as its tile.</p>
+            <p>The sentences are written by hand and chosen by the readings; nothing is generated. They follow public scales: the World Health Organization's sun protection guidance for UV, the Beaufort scale for wind, the US Environmental Protection Agency's activity guidance for the US AQI and CPCB's health impacts for India's National AQI, the dew point for how humid air feels, and the Met Office's bands for visibility. Pressure counts as falling or rising from a change of 3.6 hPa in three hours, or of 4 hPa since the same hour the day before. The sentences are general guidance, not medical or safety advice. Air quality and pollen are still model estimates, and the card says so at its foot. A reading with no value has a row that says <strong>Unavailable</strong> and no sentences.</p>
+            <p>Swipe up to bring the tiles back. Another city or another section starts with the tiles too. Where the page is taller than the screen, swipe down at its top and up at its foot. With VoiceOver, every tile has an <strong>Explain the readings</strong> action, and the list a <strong>Show the tiles</strong> action.</p>
+            <p>For the forecast hour by hour, tap a tile: UV index opens today's UV curve, and Wind, Precipitation, Humidity and Cloud cover each open a graph of the next 24 hours. The hourly card on Today has 24-hour graphs too (see &ldquo;What does the hourly card show?&rdquo;).</p>
+          </details>
+          <details>
+            <summary>How do I open a tile on Details?</summary>
+            <p>The tiles on Details rest compact. Long press a tile and choose <strong>Show details</strong> for its extra lines; <strong>Make compact</strong> closes it again. A tile opened this way stays open, and the page can then be longer than the screen. UV index and Pressure have one size. A tap on a tile still opens its page.</p>
+          </details>
+          <details>
+            <summary>How do I move, shrink or remove cards?</summary>
+            <p>Long press a card on Today or Details and move your finger to drag it to a new place on that page; the other cards make room, and the page scrolls when you hold the card near its top or foot. Keep holding still instead, and the card's menu opens:</p>
+            <ul>
+              <li><strong>Make compact</strong> or <strong>Show details</strong> (UV index and Pressure have one size).</li>
+              <li><strong>Move up</strong> and <strong>Move down</strong>.</li>
+              <li><strong>Move to Details</strong> or <strong>Move to Today</strong>, which sends the card to the other page. A drag stays on its own page.</li>
+              <li><strong>Edit cards&hellip;</strong>, which opens the card list.</li>
+              <li><strong>Restore defaults&hellip;</strong>, shown only when something differs from the original pages (see the next question).</li>
+              <li><strong>Remove from Today</strong> or <strong>Remove from Details</strong>.</li>
+            </ul>
+            <p>With VoiceOver, the same choices are actions on each tile.</p>
+            <p><strong>Cards</strong> (from <strong>Edit cards&hellip;</strong>, from <strong>Settings &rarr; Layout and voice</strong>, or from the note at the foot of a page that says how many cards were removed from it) lists the cards under <strong>On Today</strong>, <strong>On Details</strong> and <strong>Removed</strong>. Drag a row by its handle to reorder it within its page, tap the arrow to send a card to the other page, tap the red button to remove a card, tap the plus to bring one back, and tap the round size button to switch one card between Detailed and Compact; a row names its size, <strong>Compact</strong> or <strong>Detailed</strong>, only when you have changed it. While Past week is part of the hourly card it has no size of its own. Changes apply at once and are kept after the app restarts. On a wide iPad, full-width cards stay on the left and every tile on the right.</p>
+            <p>If you move or remove every card from Details, the page says so and offers <strong>Edit cards</strong>.</p>
+          </details>
+          <details>
+            <summary>How do I get the original cards back?</summary>
+            <p>Long press any card on Today or Details and choose <strong>Restore defaults&hellip;</strong>. Twofold asks first, then puts every card back on its own page, in its original place and size, and brings removed cards back. <strong>Restore defaults</strong> is also at the foot of the <strong>Cards</strong> list, where it applies at once. The menu item appears only when something differs from the original pages.</p>
+            <p>Restore defaults does not change the scales, the current weather layout, the voice or your cities.</p>
+          </details>
+          <details>
+            <summary>What does the hourly card show?</summary>
+            <p>Six symbol buttons head the card. The first shows the hours; the others swap them for a 24-hour graph of temperature, rain, wind, humidity or UV. Drag across a graph to read an hour, and choose the first button to bring the hours back.</p>
+            <p>Under the buttons sits Twofold's line of commentary, unless the voice is Plain (see &ldquo;What is the line in the hourly card?&rdquo;), then the hours as a strip. Each hour's first temperature is drawn in a colour for that temperature, with the other scale beneath it (with one scale, see &ldquo;Can I show only Celsius or only Fahrenheit?&rdquo;). In the Detailed size, an hour with a rain chance of 10% or more shows it under its icon. Tap an hour for its actual and feels-like readings in your scales.</p>
+            <p>Sunrise and sunset sit in the strip at their times. When a nearby station is adjusting the forecast, the card says <strong>Adjusted to a nearby station for the next few hours</strong>.</p>
+            <p>On Today the card's last row shows <strong>Yesterday</strong>'s high and low, with <strong>Past week</strong> named under it. Tap it for the Past week page.</p>
+          </details>
+          <details>
+            <summary>What are the earlier hours in the hourly card?</summary>
+            <p>Drag the hourly strip to the right and up to three earlier hours appear before the hour in progress, in a quieter colour, with a thin line between them and now. They are the forecast model's values for those hours, not measurements from a station. Tap one and the card says so: &ldquo;An earlier hour, from the forecast model. Not a measurement.&rdquo;</p>
+            <p>The strip opens past them, so you see them only when you drag.</p>
+          </details>
+          <details>
+            <summary>What does the Week show?</summary>
+            <p>The days ahead, up to ten, on one page sized to fit the screen. Each row shows the weekday and the day's low and high on one shared scale, joined by a soft ribbon. A headline at the top names what stands out, and a day can carry one tag: <strong>Frost</strong>, <strong>Wettest</strong>, <strong>Warmest</strong> or <strong>Coldest</strong>. When nothing stands out, there is no headline. Tap a day for its forecast, sunrise, sunset and daylight.</p>
+            <p>While the Week fits the screen it stands still and does not scroll. On a small phone or at large text sizes the Week is taller than the screen and scrolls. Like every page, it does not refresh on a pull; tap the round arrow at the top right.</p>
+          </details>
+          <details>
+            <summary>How do I see yesterday on the Week?</summary>
+            <p>Swipe down on the Week to bring in yesterday's row above today's; swipe up to take it away. Where the Week is taller than the screen, swipe down at its top and up at its foot. The row also goes when you leave the page. Tap the row for Past week's Yesterday. With VoiceOver, today's row has <strong>Show yesterday</strong> and <strong>Hide yesterday</strong> actions.</p>
+            <p>To keep the row on the page, long press the Week card and turn on <strong>Always show yesterday</strong>.</p>
+          </details>
+          <details>
+            <summary>What is the Briefing?</summary>
+            <p>A greeting, then one card in four parts: <strong>Right now</strong>, <strong>This hour</strong>, <strong>Today</strong> and <strong>This week</strong>. Each part has up to four short lines about rain, extremes, comfort and the sky, written by hand in advance and filled in from the current readings. A line whose data is missing is left out, and a part with no lines disappears. Rain estimates and air quality are labelled as model estimates.</p>
+            <p><strong>Activities</strong> is the Briefing's second card: Walk, Running, Cycling, Hiking, Stargazing and Drying laundry. Each row shows the rating now (Poor, Fair, Good or Great), what limits it, and the best time in the next 24 hours over a shaded band of the coming hours. Ratings are guidance, not safety advice. The card is not on the page until you ask for it (see the next question).</p>
+          </details>
+          <details>
+            <summary>Where did Activities go?</summary>
+            <p>Activities is still in the Briefing. Swipe down on the Briefing, or tap the small button with the walking figure beside the greeting, and the Activities card takes the timeline's place. Swipe up, or tap the button again, for the timeline. Where the page is taller than the screen, swipe down at its top and up at its foot. The timeline also returns when you choose another city or leave the Briefing. With VoiceOver, the button is <strong>Show activities</strong> or <strong>Show the briefing</strong>.</p>
+            <p>To keep both cards on the page, long press either card and turn on <strong>Always show activities</strong>. The page is then longer, and the button beside the greeting goes.</p>
+          </details>
+          <details>
+            <summary>How do I see more about an activity, or change the list?</summary>
+            <p>Bring in the Activities card (see the previous question) and tap an activity's row. Its page shows the rating now and what holds it back (<strong>Now</strong>), the <strong>Best time</strong>, the <strong>Next 24 hours</strong> hour by hour, and <strong>What the score looks at</strong>.</p>
+            <p>To change the list, long press the Activities card and choose <strong>Edit activities&hellip;</strong>. Remove an activity with the red button, bring one back with the plus, drag a row by its handle to reorder, or tap <strong>Restore defaults</strong>. When activities are removed, a note under the list says how many and opens the same editor. The Activities widget keeps its own list.</p>
+          </details>
+          <details>
+            <summary>What is the line in the hourly card?</summary>
+            <p>That is Twofold's voice: one line about the weather in the place you are viewing. It sits in the hourly card above the hours, and under the current reading if the hourly card is not on Today. Choose it under <strong>Voice</strong> in <strong>Settings &rarr; Layout and voice</strong>: Plain (no line), Friendly (the default), or Cheeky, which teases. Turn on <strong>Allow roasts</strong> for Roast, which is rude on purpose about the sky and about you. No voice swears or gets political. The line follows the readings and changes by itself, on the hour and when the weather changes; a tap does not change it (see the next question). Friendly, Cheeky and Roast each have about 260 lines. Lines are written in advance and kept in the app; nothing is generated or sent anywhere.</p>
+          </details>
+          <details>
+            <summary>Why did the quote stop changing when I tap it?</summary>
+            <p>The line now changes only by itself, on the hour and when the weather changes, so it always matches the reading. A tap gets an answer instead: the voice replies in a short note at the foot of the page. Tap the same line again and the answer gets more pointed, seven answers in all, and then the voice gives up. Friendly teases, Cheeky makes a point, and Roast is rude on purpose and still needs <strong>Allow roasts</strong> in Settings. The joke line on a tile's page and the Moon's line on Today's night side answer in the same way.</p>
+            <p>To read more lines, tap <strong>Another line</strong> under the sample in <strong>Settings &rarr; Layout and voice</strong>; it changes the sample only. The <strong>Snark</strong> widget keeps its own button for another line.</p>
+          </details>
+          <details>
+            <summary>What does the next-hour line show?</summary>
+            <p>When rain or snow is falling, starting, stopping or expected, a line under the current reading says what it is doing over the next two hours; tap it for a quarter-hour chart. It is a model estimate, so its times say &ldquo;about&rdquo;. On a dry spell the line is not shown. The <strong>Next 2 hours</strong> widget shows the same estimate.</p>
+          </details>
+          <details>
+            <summary>What are Discoveries?</summary>
+            <p><strong>Settings &rarr; Discoveries</strong> collects small finds: readings where Celsius and Fahrenheit line up (16&deg;C is 61&deg;F, the same digits backwards), weather worth noticing, a few things to try in the app, and hidden places. The page lists 46 finds, ten of them hidden places. Finds about the two scales lining up need both scales showing. Hidden places are real spots with real forecasts that only turn up when you search for them by name; the locked entries give clues. Finds are kept on this device only and are not sent anywhere. Weather finds need a current reading, so saved weather does not count. A find for something you do in the app is recorded when you do it, and a find made while Settings is open is announced when Settings closes.</p>
+          </details>
+          <details>
+            <summary>Can I change the colours or the app icon?</summary>
+            <p>Not in this version. Twofold has one look: a flat sky in the colours of the weather, white cards and rounded type. The Look, Cards, Accent and App icon choices of earlier versions are hidden, and the app icon is Mirror Day. An icon you picked in an earlier version stays in place, because Twofold never changes the icon on its own.</p>
+          </details>
+          <details>
+            <summary>Where did the radar go?</summary>
+            <p>The rain radar and its map were removed in version 1.5 because they were not good enough. A radar may return; there is no date for it. Nothing else changed for rain. The next-hour line still shows when rain or snow is close. The hourly card still has the rain chances: choose the rain button at its top for a 24-hour graph, or tap an hour for its chance. The Precipitation tile is on Details.</p>
+          </details>
+          <details>
+            <summary>How do I switch, add, reorder or remove cities?</summary>
+            <p>Tap the round button beside the bottom bar. It lists My location and your saved cities; tap one to show it in the same section. With no My location saved, <strong>Use my location</strong> adds it. <strong>Search cities</strong> opens Cities with the keyboard ready. A tap outside the list closes it.</p>
+            <p>Tap the city name at the top to open <strong>Cities</strong>. Type at least three characters to search, or select a suggested place. Twofold saves up to 12 places. Use <strong>Edit</strong> to reorder saved cities, or swipe a saved city to remove it.</p>
+            <p>Search works when location permission is off. <strong>Add My location</strong> is optional; if access was denied, you can change it in iOS Location Services settings. Searches and selected city coordinates still reach the weather provider, as described in <a href="privacy.html">Privacy</a>.</p>
+          </details>
+          <details>
+            <summary>How does My location work?</summary>
+            <p><strong>Add My location</strong> in Cities (or <strong>Use my location</strong> in the city list) saves a place marked with a location arrow that stays at the top of the list and counts as one of your 12 places. While <strong>Follow my location</strong> is on (under <strong>Location</strong> in <strong>Settings</strong>, on by default), each time Twofold comes to the foreground it asks iOS once for an approximate position, moves My location there if the rounded coordinates have changed, and opens on it after a launch, after 15 minutes away or after a move of 10 km or more. With the setting off, My location still moves, but the city on screen never changes. An unchanged position fetches nothing new; a new place name there only renames it.</p>
+            <p>With Precise Location on, My location is named after your neighbourhood where Apple knows one, with the city beneath; with it off, Twofold shows the city, because an approximate position can be several kilometres out. Twofold never requests location in the background, and it never asks for permission on its own: only a tap on <strong>Use my location</strong>, <strong>Add My location</strong>, <strong>Update my location</strong> or <strong>Allow location</strong> can show the permission prompt.</p>
+            <p>If access is denied or restricted, My location keeps the last known place and its saved weather, the list explains why, and <strong>Open Settings</strong> leads to the permission. Other cities are unaffected. Swipe left on My location to remove it.</p>
+            <p>Widgets know My location by its coordinates. A widget set to <strong>Follow Twofold</strong> shows it whenever it is the selected place; a widget pinned to it shows the place at those coordinates and needs a new choice in the widget editor after My location has moved to a different area.</p>
           </details>
           <details>
             <summary>Why has the reading not changed after a refresh?</summary>
-            <p>Pull down on the forecast to refresh. Twofold also refreshes the selected city when you return to the app. A fresh cached response may be reused, and a provider may return unchanged data, so check the reading's timestamp.</p>
-            <p>If a request fails, Twofold keeps labelled saved weather when available. An unavailable field is not a zero reading. If the app asks you to wait, repeated refreshes do not bypass the provider cooldown or local request limit; the daily limit resets at midnight UTC.</p>
+            <p>Tap the round arrow at the top right of any section to refresh; pages do not refresh on a pull. Twofold also refreshes the selected city when returning to the foreground. A fresh cached response may be reused, and a provider may return unchanged data. The reading's timestamp is more useful than the time you tapped refresh.</p>
+            <p>If a request fails, Twofold keeps labelled saved weather when available. Every page says so in a note at its foot, with a <strong>Refresh</strong> button. An unavailable field is not a zero reading. Air quality and National Weather Service (NWS) supplements can fail independently of the main forecast.</p>
+            <p>If the app asks you to wait, allow the provider cooldown or local request window to expire. Repeated refreshes do not bypass it. The local daily budget resets at midnight UTC.</p>
           </details>
           <details>
             <summary>How do I add or change a widget?</summary>
-            <p>Load a city in Twofold first. Then touch and hold the Home Screen, choose <strong>Edit &rarr; Add Widget</strong>, and search for <strong>Twofold</strong>. There are five widgets: <strong>Weather, both ways</strong> (small, medium and large), <strong>Air quality &amp; pollen</strong>, <strong>Next 24 hours</strong>, <strong>Activities</strong> and <strong>Feels like</strong>. For the Lock Screen, touch and hold it and choose <strong>Customize &rarr; Add Widgets</strong>: Weather and Feels like offer a rectangular widget, and Air quality &amp; pollen offers circular and rectangular ones. The small widgets also work in StandBy.</p>
-            <p>To choose a city, touch and hold a widget and choose <strong>Edit Widget &rarr; City</strong>. <strong>Follow Twofold</strong> uses the app's selected city. iOS decides when widgets update; Twofold asks for new weather about hourly.</p>
+            <p>Touch and hold the Home Screen, choose <strong>Edit &rarr; Add Widget</strong>, and search for <strong>Twofold</strong>. There are nine widgets: <strong>Weather, both ways</strong> (small, medium and large, showing actual and feels-like temperatures in your scales), <strong>Air quality &amp; pollen</strong>, <strong>Next 24 hours</strong>, <strong>Next 2 hours</strong>, <strong>Activities</strong>, <strong>Feels like</strong>, <strong>Past week</strong>, <strong>Moon phase</strong> and <strong>Snark</strong>. For the Lock Screen, see the next question. The small widgets also work in StandBy. Widgets follow <strong>Scales</strong> in the app: with one scale chosen there, every temperature on a widget is one value. A widget's sky takes the colour of the weather, with the sun or moon, clouds and hills; in snow, in rain or at night it draws no flakes, drops or stars behind the text.</p>
+            <p>Save and load a city in Twofold first. Touch and hold a Home Screen widget and choose <strong>Edit Widget &rarr; City</strong>. <strong>Follow Twofold</strong> uses the app's selected city; choosing a named city keeps that widget on the saved place. Tapping a widget opens the page for what it shows; the Weather widget opens Today, Activities opens the Briefing with the Activities card showing, and Moon phase opens tonight's Moon on Today. Widgets do not name providers; <strong>Settings &rarr; Weather sources</strong> lists them.</p>
+            <p>iOS decides when widgets update. Twofold requests new weather about hourly and can use labelled hourly forecasts between updates. The widget keeps the reading's time visible and marks saved or forecast-based readings; it does not promise an exact refresh time or send warning notifications. If a pinned city was removed, choose another saved place in the widget editor.</p>
+          </details>
+          <details>
+            <summary>Which Lock Screen widgets are there?</summary>
+            <p>Besides Weather, both ways, Feels like and Air quality, Twofold has a Lock Screen widget for each detail: Twofold's voice, Moon, Sunrise &amp; sunset, Today at a glance, Tomorrow, Both scales, UV index, Wind, Humidity &amp; dew point, Rain chance, Pressure, Visibility, High &amp; low, and Next hour. Most come as a small circle, a rectangle and a line above the clock; the voice and Today at a glance need the rectangle or the line. Temperatures follow <strong>Scales</strong> in the app; wind, pressure and visibility show both of their units. The voice widget speaks in the voice chosen in the app.</p>
+          </details>
+          <details>
+            <summary>How do I add Twofold to the Lock Screen?</summary>
+            <p>Touch and hold the Lock Screen, choose <strong>Customise</strong>, then <strong>Lock Screen</strong>.</p>
+            <ul>
+              <li><strong>Below the clock:</strong> tap the widget area and search for <strong>Twofold</strong>. Weather, Feels like and Air quality &amp; pollen each come in circular and rectangular sizes. The circle shows one reading in both scales; the rectangle shows actual and feels like in both.</li>
+              <li><strong>The line above the clock:</strong> tap the date line and choose Weather or Feels like. It shows the reading in both scales, and <strong>Saved</strong> when the reading is old.</li>
+              <li><strong>Bottom corners:</strong> tap a corner button, remove it with <strong>&minus;</strong>, tap <strong>+</strong>, and choose <strong>Twofold</strong> to add the <strong>Open Twofold</strong> control. The same control can go in Control Center.</li>
+            </ul>
+            <p>With one scale chosen under <strong>Scales</strong> in the app, each of these shows that scale alone, and the Weather circle sets feels like under the reading.</p>
+            <p>Tap any of them to open Twofold.</p>
+          </details>
+          <details>
+            <summary>What is the rain Live Activity?</summary>
+            <p>An optional countdown on the Lock Screen and in the Dynamic Island. Turn on <strong>Rain on the Lock Screen</strong> in <strong>Settings &rarr; Forecast alerts</strong>; it is off by default. When the model expects rain or snow within two hours for the city on screen, Twofold shows when it starts or stops. It ends when the estimate turns dry, the city is removed or the setting is turned off.</p>
+            <p>The countdown runs on its own, but the bars and times change only when you open Twofold and it refreshes; Twofold never starts or updates it in the background and uses no push service. Each one is labelled a model estimate from Open-Meteo with its time. If nothing shows, check that Live Activities are allowed for Twofold in the iOS Settings app.</p>
           </details>
           <details>
             <summary>Why is the weather background still?</summary>
-            <p>Motion pauses with iOS Reduce Motion, Low Power Mode, or a hidden or inactive forecast. Missing weather uses a neutral background.</p>
+            <p>The sky moves with the current weather, such as drifting clouds, rain or snow. Motion pauses with iOS Reduce Motion, Low Power Mode, or a hidden or inactive app. Missing weather uses a neutral background.</p>
           </details>
         </section>
 
@@ -96,39 +274,42 @@
           <h2 id="readings">Readings and sources</h2>
           <details>
             <summary>Why does the temperature differ from another app?</summary>
-            <p>Open <strong>About &amp; settings &rarr; Weather sources</strong> to see the city, coordinates, provider and reading time. Open-Meteo supplies area-based model estimates. In the US, Twofold checks up to three nearby NWS stations and may use a quality-checked observation within 25 km. A station measures its own site, not every address in a city, and other apps can use different sources and update times.</p>
+            <p>Open <strong>Settings &rarr; Weather sources</strong> to compare the selected city, coordinates, actual/feels-like values, provider and reading time. The page also shows a retained supporting model when a station observation is selected.</p>
+            <p>Open-Meteo supplies area-based model estimates. In the US, Twofold checks up to three nearby NWS stations and selects the newest quality-accepted observation within 25 km, subject to age and model-lag limits; elsewhere it looks for an airport report within 25 km. A station measures its own location, not every address in a city. Model estimates and station observations can disagree about temperature or clouds; Apple and Google can use different sources and update times too. Forecasts and individual detail cards keep their own source labels. Other apps may calculate feels like with a different formula; Twofold uses one for every source (see below).</p>
           </details>
           <details>
             <summary>Why does it feel warmer or cooler than the actual temperature?</summary>
-            <p>Under today's high and low, a short line gives the difference in both scales and its main cause: wind, humid or dry air, or strong sunshine. It is hidden when the difference is under 1&deg;C. For Open-Meteo readings the cause is approximate. NWS station readings use wind chill or heat index instead.</p>
+            <p>Twofold calculates feels like the same way for every source, using the US National Weather Service convention: wind chill at or below 10&deg;C / 50&deg;F when there is a wind, heat index in humid heat from about 27&deg;C / 80&deg;F, and the actual temperature otherwise. The Briefing's <strong>Right now</strong>, today's day page (tap today on the Week) and the sources page show a short line such as &ldquo;Feels 2&deg;C / 4&deg;F cooler because of the wind&rdquo;, with the difference and the reason. It is hidden when feels like is within 1&deg;C of the actual temperature. If the wind is missing on a cold reading, or the humidity on a hot one, feels like shows as unavailable rather than as the actual temperature.</p>
+          </details>
+          <details>
+            <summary>Why is Twofold's feels like different from Apple Weather?</summary>
+            <p>Mostly because the two apps define feels like differently. In humid heat Twofold uses the US National Weather Service heat index, the official US measure, which reads above the air temperature; in cold wind it uses the NWS wind chill. The current reading does not name the formula. <strong>Settings &rarr; Weather sources</strong> names it, under <strong>Feels like formula</strong>, and the Briefing's <strong>Right now</strong> says by how much feels like differs and why. Apple Weather uses its own formula, so the two feels-like numbers can differ by several degrees even when the temperatures agree.</p>
+            <p>The temperatures themselves can differ too. Near a US weather station, Twofold shows the station's measurement, taken as the median of its recent reports and checked against other nearby stations, while other apps may use a model estimate for the area, a different station or a different update time.</p>
+          </details>
+          <details>
+            <summary>Why does feels like match the temperature on mild days?</summary>
+            <p>Between about 10&deg;C / 50&deg;F and 27&deg;C / 80&deg;F neither wind chill nor heat index applies, so feels like is the actual temperature. Other apps may use a different apparent temperature that also counts mild breezes and sunshine, which can read a degree or two colder or warmer. Sunshine is not part of Twofold's feels like.</p>
           </details>
           <details>
             <summary>What does the Precipitation card show?</summary>
-            <p>The large value is today's expected total. <strong>Now:</strong> shows the latest reading when available; a missing reading is left out rather than shown as zero. Detailed cards also show the day's peak chance of precipitation.</p>
+            <p>The large value is today's expected total from the forecast. <strong>Now:</strong> gives the latest reading when one is available; a missing reading is left out rather than shown as zero. Detailed cards also show the day's peak chance of precipitation. Tap the card for graphs of the chance and the amount over the next 24 hours.</p>
+          </details>
+          <details>
+            <summary>Which air quality index does Twofold show?</summary>
+            <p>Air quality is a model estimate from the Copernicus Atmosphere Monitoring Service (CAMS) through Open-Meteo, on the US and European AQI scales, with PM2.5, PM10, ozone and nitrogen dioxide. Indian cities lead with India's National AQI, worked out on the device by the CPCB method from 24-hour averages; when CPCB's data rules are not met, the US AQI leads instead.</p>
           </details>
           <details>
             <summary>Why is pollen not available?</summary>
-            <p>Pollen comes from the Copernicus Atmosphere Monitoring Service (CAMS) through Open-Meteo, and CAMS models pollen only over Europe. Elsewhere the card says <strong>Not available</strong> rather than showing zero.</p>
+            <p>Pollen comes from the Copernicus Atmosphere Monitoring Service (CAMS) through Open-Meteo, and CAMS models pollen only over Europe. Elsewhere the Pollen card does not appear, and the pollen page says it is unavailable rather than showing zero. In Europe, a type can show <strong>Not modelled</strong> when CAMS has no value for it, and <strong>None</strong> outside its season.</p>
           </details>
           <details>
-            <summary>Are NWS alerts live everywhere?</summary>
-            <p>NWS alerts cover supported US locations and territories only. An unavailable or saved alert check does not confirm that there are no current warnings, and bulletins do not send notifications. Consult your official weather authority for current warnings.</p>
+            <summary>Are official alerts live everywhere?</summary>
+            <p>No. Official alerts come from the National Weather Service for supported US locations and territories, and from Environment and Climate Change Canada for Canadian cities. An unavailable or saved alert check does not confirm that there are no current warnings. Bulletins are shown in the app; they send a notification only with the optional official alerts setting and only when the app itself refreshes, never from widget refreshes. Consult the relevant official weather authority for current warnings.</p>
           </details>
           <details>
             <summary>Are sun and moon times exact?</summary>
-            <p>Sun times come from the forecast when available. Otherwise the device calculates them, marked &asymp; in the hourly forecast and <strong>Approximate</strong> on the day page. Moon phase and illumination are always approximate calculations on the device.</p>
-          </details>
-        </section>
-
-        <section class="faq" aria-labelledby="radar">
-          <h2 id="radar">Rain radar</h2>
-          <details>
-            <summary>How does the rain radar work?</summary>
-            <p>Open the map; <strong>Rain radar</strong> is the first layer. It plays the past two hours of composite radar from RainViewer in 10-minute frames, centred on the selected city. Tap pause or drag the time slider to pick a frame. Radar shows precipitation that has already fallen, not a forecast. The source stops at zoom level 7, so close zooms look soft.</p>
-          </details>
-          <details>
-            <summary>Why is the radar not loading?</summary>
-            <p>Check your connection and tap <strong>Try again</strong>. RainViewer's free service has no availability guarantee. If frames load slowly, hold the map still: Twofold limits itself to 80 radar requests a minute and loads the newest frame first. An area may also be outside radar coverage. For US places, <strong>Open US radar</strong> opens the official NWS radar site.</p>
+            <p>Sunrise and sunset appear in the hourly forecast at their times, and a day's detail page shows them with daylight length. Sun times come from the forecast when available. When the forecast has none, the device calculates them: the hourly forecast marks these with &asymp; and the day page labels them <strong>Approximate</strong>. Terrain and atmospheric conditions limit precision. Some polar dates have no sunrise or sunset.</p>
+            <p>The Moon is always worked out on the device, and Today's night side says so. Phases and how much is lit come from the average length of the lunar month, so the date of a full or new moon can be a day out. Moonrise and moonset are worked out for a level horizon at sea level. In most of the world they are close to an almanac's times; hills, buildings and the air near the horizon can still shift what you see by a few minutes. In the far north or south, a Moon that skims the horizon can be shown rising or setting when it does not quite, or the other way round. A day with no moonrise or no moonset says <strong>None this day</strong>.</p>
           </details>
         </section>
 
@@ -136,15 +317,21 @@
           <h2 id="alerts">Forecast alerts</h2>
           <details>
             <summary>How do forecast alerts work?</summary>
-            <p>Open <strong>About &amp; settings &rarr; Forecast alerts</strong> and tap <strong>Add alert</strong>. Choose temperature or feels like above or below a value, rain chance, wind gusts, or UV index, for one saved city or all of them, at the forecast hour or 1, 3 or 12 hours before. Up to 10 alerts can be saved. Forecast alerts are separate from the official NWS alerts card on the forecast.</p>
-            <p>Twofold looks through the next 36 hours of each city's saved forecast and schedules a notification when the forecast newly crosses your threshold. These are your own thresholds, not official warnings, and they are scheduled on the device.</p>
+            <p>Open <strong>Settings &rarr; Forecast alerts</strong> and tap <strong>Add alert</strong>. Choose temperature or feels like above or below a value, rain chance, wind gusts, or UV index. Each alert can follow one saved city or all of them, and notify at the forecast hour or 1, 3 or 12 hours before. Up to 10 alerts can be saved. Swipe left on an alert to delete it. Removing a city deletes alerts set for that city only. Forecast alerts are separate from the official alerts card on Today.</p>
+            <p>Twofold looks through the next 36 hours of each city's saved hourly forecast and schedules one notification each time the forecast newly crosses your threshold. A condition already under way does not notify again, and the same onset is not repeated after a refresh. If the lead time has already passed, the notification arrives about a minute after planning.</p>
+            <p>These are your own thresholds, not official warnings. Notifications are scheduled on the device; no server sends them. Tapping a notification opens the city it is about, and a notification that fires on a later day than its forecast names the weekday in both the onset and the &ldquo;Forecast updated&rdquo; time.</p>
+          </details>
+          <details>
+            <summary>Can Twofold notify me about official alerts?</summary>
+            <p>Yes, as an opt-in. Turn on <strong>Notify me</strong> under <strong>Official weather alerts</strong> in <strong>Settings &rarr; Forecast alerts</strong>. When a refresh brings a National Weather Service alert for a saved US city, or an Environment Canada alert for a saved Canadian city, that Twofold has not shown before, it sends a local notification at once, titled with the city and event and grouped with that city's other alerts. Alerts already on screen when you turn the option on do not notify; turning it off forgets which alerts were seen.</p>
+            <p>These notifications arrive only when the app refreshes a city: there is no background fetch, and widget refreshes do not send them. They are not time-sensitive notifications and cannot replace official warning channels. Up to 20 Twofold notifications can be pending at once.</p>
           </details>
           <details>
             <summary>Why are my alerts not arriving?</summary>
             <ul>
-              <li><strong>Notifications are off.</strong> On the alerts page, tap <strong>Open notification settings</strong> and allow them. Focus modes and summaries can also hold them back.</li>
-              <li><strong>The app has not refreshed recently.</strong> Alerts are planned only when Twofold refreshes a city in the app. There is no background fetch, and a forecast more than 12 hours old plans nothing new.</li>
-              <li><strong>The alert is off or the threshold was not crossed.</strong> A missing forecast value never counts as a crossing.</li>
+              <li><strong>Notifications are off.</strong> Twofold asks for permission when you add your first alert. If the alerts page says notifications are off, tap <strong>Open notification settings</strong> and allow them. Focus modes and notification summaries can also hold them back.</li>
+              <li><strong>The app has not refreshed recently.</strong> Alerts are planned only when Twofold refreshes a city: opening the app, returning to it, selecting a city or tapping the refresh button. There is no background fetch, and widget updates do not replan alerts. A city whose saved forecast is more than 12 hours old plans nothing new, so open Twofold now and then.</li>
+              <li><strong>The alert is off or the threshold was never crossed.</strong> Check the alert's <strong>On</strong> switch and threshold. A missing forecast value never counts as a crossing; for example, a forecast without UV or feels-like data cannot trigger those alerts.</li>
               <li><strong>Too many alerts.</strong> At most 20 notifications are scheduled at once, soonest first.</li>
             </ul>
           </details>
@@ -154,11 +341,15 @@
           <h2 id="data">Your data</h2>
           <details>
             <summary>How do I delete stored data?</summary>
-            <p>Removing a saved city removes its entry, saved snapshot, past-week history and any alerts set for that city, but does not immediately clear the separate HTTP or radar caches. There is no in-app reset button. Deleting the app removes its local data; offloading it keeps the data. Provider logs and existing device backups are separate. See <a href="privacy.html#deletion">Your controls and deletion</a>.</p>
+            <p>Removing a saved city removes its entry, saved snapshot, past-week history and any alerts set for that city, but does not immediately clear the separate HTTP response cache. There is no in-app cache-reset button. Deleting the app removes its local data; offloading it preserves app data. Provider logs and existing device backups are separate. Full details are in <a href="privacy.html#deletion">Privacy</a>.</p>
           </details>
           <details>
             <summary>What is sent over the network?</summary>
-            <p>Weather requests send rounded coordinates and your IP address to the providers. City searches send the text you type to Open-Meteo. The radar and map contact RainViewer and Apple. There are no accounts, ads or analytics. Full details are in the <a href="privacy.html#services">privacy policy</a>.</p>
+            <p>Weather requests send rounded coordinates and your IP address to the providers. City searches send the text you type to Open-Meteo. Finding the name of My location contacts Apple. There are no accounts, ads or analytics. Full details are in <a href="privacy.html#services">Privacy</a>.</p>
+          </details>
+          <details>
+            <summary>Does Twofold have in-app purchases?</summary>
+            <p>No. Twofold is free, every feature is included and there is nothing to buy or restore. <strong>Rate Twofold</strong> in <strong>Settings</strong> opens the App Store review page.</p>
           </details>
         </section>
       </article>
