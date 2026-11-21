@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eef4f8">
-  <meta name="description" content="Twofold Weather's privacy policy: on-device storage, optional approximate location, the weather services that receive requests, local forecast alerts, and no accounts, ads, tracking, analytics or purchases.">
+  <meta name="description" content="Twofold Weather's privacy policy: on-device storage, optional approximate location, the weather services that receive requests, local forecast alerts, an anonymous usage summary you can turn off, and no accounts, ads, tracking or purchases.">
   <title>Privacy Policy | Twofold Weather</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -23,8 +23,8 @@
     <header class="page-heading">
       <p class="eyebrow">Twofold Weather / Privacy</p>
       <h1>Privacy policy.</h1>
-      <p class="lede">Twofold has no account system, advertising, tracking, analytics service or In-App Purchases. It does not sell personal data or send app diagnostics to a developer-operated server. Weather providers, and Apple's service for finding a place name, still receive the information needed to answer each request.</p>
-      <p class="small-note">Last updated: 16 November 2026. This revision, for version 1.8, names the units you chose for wind and distance among the saved preferences and in what the widgets and the watch are given, adds that a widget asks Environment Canada for the alerts of a Canadian city, and takes out the Roast opt-in, which is no longer saved or shared (the voice you chose still is); the 13 November revision, for version 1.6, added the names and times of official alerts to what is shared with the widgets, and stated that the past-week record and the chosen voice are kept where the widgets can read them; the 11 November revision named the discoveries, the voice and the choice of temperature scales among what is stored on your device; the 10 November revision removed tips and the rain radar, which Twofold has not offered since version 1.5; the 7 November revision added the airport observations and Canadian alerts in version 1.4. This policy covers the Twofold Weather app for iPhone and iPad, its widgets, its Apple Watch app, and this support website, provided by Abhishek Agrawal.</p>
+      <p class="lede">Twofold has no account system, advertising, tracking or In-App Purchases. From version 1.13 it sends anonymous usage data to TelemetryDeck, an analytics service, unless you turn that off: a short note for each thing you do in the app and a summary of counts and settings once a day, never your places or your weather (see <a href="#usage">Usage summary</a>). Twofold does not sell personal data and runs no server of its own. Weather providers, and Apple's service for finding a place name, still receive the information needed to answer each request.</p>
+      <p class="small-note">Last updated: 21 November 2026. This revision, for version 1.13, adds the anonymous usage data that Twofold sends to TelemetryDeck as the app is used unless you turn it off, and no longer says that Twofold has no analytics service; the 15 November revision, for version 1.8, named the units you chose for wind and distance among the saved preferences and in what the widgets and the watch are given, added that a widget asks Environment Canada for the alerts of a Canadian city, and took out the Roast opt-in, which is no longer saved or shared (the voice you chose still is); the 13 November revision, for version 1.6, added the names and times of official alerts to what is shared with the widgets, and stated that the past-week record and the chosen voice are kept where the widgets can read them; the 11 November revision named the discoveries, the voice and the choice of temperature scales among what is stored on your device; the 10 November revision removed tips and the rain radar, which Twofold has not offered since version 1.5; the 7 November revision added the airport observations and Canadian alerts in version 1.4. This policy covers the Twofold Weather app for iPhone and iPad, its widgets, its Apple Watch app, and this support website, provided by Abhishek Agrawal.</p>
     </header>
 
     <div class="reading-grid">
@@ -33,6 +33,7 @@
         <a href="#on-device">On-device data</a>
         <a href="#location">Location</a>
         <a href="#search">City search</a>
+        <a href="#usage">Usage summary</a>
         <a href="#services">Services</a>
         <a href="#widgets">Widgets</a>
         <a href="#watch">Apple Watch</a>
@@ -57,8 +58,9 @@
             <li><strong>Widget state:</strong> a bounded copy of saved places, the selected city, the temperature scales and their order with the units for wind and distance, the voice you chose, weather for widgets and, from version 1.6, the names and times of official alerts in force, in a local App Group container the app shares with its widgets (see <a href="#widgets">Widgets</a>).</li>
             <li><strong>HTTP responses:</strong> a response cache of up to 64 MiB, shared with the widgets. It can hold weather, alerts and city-search results, including place names and coordinates returned by providers, until cache pruning or app deletion, even after their freshness period ends. Older private cache files can remain after an upgrade.</li>
             <li><strong>Radar from earlier versions:</strong> versions before 1.5 had a rain radar and kept its images in a separate cache. Since version 1.5 Twofold has no radar, makes no radar request and empties that cache when it starts. A setting that records whether you had opened Radar can remain in the app's preferences; nothing uses it.</li>
-            <li><strong>Discoveries:</strong> which discoveries you have made and the date you first made each, including the ones for things you do in the app (a page pulled down, the voice's line tapped, a voice chosen) and the hidden places you found, and which voices you have tried. These stay in the app's preferences, are never sent anywhere, and are not shared with the widgets or the watch.</li>
+            <li><strong>Discoveries:</strong> which discoveries you have made and the date you first made each, including the ones for things you do in the app (a page pulled down, the voice's line tapped, a voice chosen) and the hidden places you found, and which voices you have tried. These stay in the app's preferences and are not shared with the widgets or the watch. Which ones you found is never sent anywhere; the usage summary carries only how many, as a number.</li>
             <li><strong>Use and prompts:</strong> the days you opened Twofold with weather on screen (as calendar days, not times or places), your longest run of days in a row, how many visits showed fresh weather for a while, and when Twofold last asked for a rating (with the app version). These stay in the app's preferences, are never sent anywhere, and only decide when to ask.</li>
+            <li><strong>Usage summary:</strong> from version 1.13, while <strong>Share anonymous usage</strong> is on, the counts described under <a href="#usage">Usage summary</a>, the local calendar days they were counted on and the day the last summary was sent, in the app's preferences. Turning the switch off deletes the counts.</li>
             <li><strong>Request-limit state:</strong> request times, weighted costs and provider cooldowns, shared locally so limits survive relaunches and apply to the app and widgets together. This state does not record city names or search text.</li>
           </ul>
           <p>Local diagnostic counters and system logs record provider names, request outcomes and durations, cache use, and errors. Twofold's diagnostic messages do not include city names, coordinates, IP addresses, or full request URLs, and they are not sent to the developer.</p>
@@ -74,6 +76,20 @@
         <section aria-labelledby="search">
           <h2 id="search">City search</h2>
           <p>Search text between 3 and 100 characters is sent to Open-Meteo's geocoding service after a short typing pause, before you press Search. The text is part of the request address, so it can appear in the provider's server logs. Twofold keeps no search-history list, but search responses may be cached on the device.</p>
+        </section>
+
+        <section aria-labelledby="usage">
+          <h2 id="usage">Anonymous usage summary</h2>
+          <p>From version 1.13, Twofold tells <a href="https://telemetrydeck.com">TelemetryDeck</a>, an analytics service in Germany, how the app is used: a short note as each thing happens (for example &ldquo;opened the Week page&rdquo; or &ldquo;opened the UV sheet from a card&rdquo;, with the page and the sheet it happened on), sent in small batches every few seconds while the app is open, and once a day, at most, a summary of the day's counts and your settings. It tells the developer which pages and features are used, which are never found, and where a tap took more than one try. <strong>Share anonymous usage</strong>, in Twofold's <strong>Settings &rarr; Help &amp; feedback</strong>, is on until you turn it off. Turned off, what was counted is deleted from the device, counting stops and nothing more is sent.</p>
+          <p>What the notes and the summary hold:</p>
+          <ul>
+            <li><strong>What you did</strong>, one note each and counted in the summary: visits and their rough length (four bands, from under 10 seconds to over 5 minutes), sections opened, swipes that brought something in, sheets opened and how they were reached, cards moved, resized or removed, Settings pages opened and which settings changed (never their values), refreshes and the refreshes that failed (by kind: a request limit, the network, other), permission prompts and their answers, taps on a link to the iOS Settings app, widget taps by the kind of page they open, and the like. Each is a number up to 999.</li>
+            <li><strong>Your settings as fixed words:</strong> the temperature scales, the units for wind and distance, the current-weather layout, the voice, how many cards are on Today, whether forecast alerts and the rain Live Activity are on, whether location and notifications are allowed, how many cities are saved as a band (0, 1, 2 to 3, 4 to 6, 7 or more), which of Twofold's widgets are placed (by kind and size), and the text size as a class, Reduce Motion, Increase Contrast, VoiceOver, light or dark appearance and iPhone or iPad.</li>
+            <li><strong>What TelemetryDeck's software adds to every note and summary:</strong> the device model, system version, app version and build, whether the app came from the App Store or TestFlight, the phone's language and region setting, its time zone as an offset from UTC, screen size and orientation, appearance and accessibility settings (text size, Reduce Motion, Bold Text and similar), the hour, weekday and month the summary was made, its own count of the days it has run on this device and when it first ran, and an identifier for this installation. It also sends a short note of its own when a visit begins and, the first time it runs, one for a new installation, with the same details and no counts.</li>
+          </ul>
+          <p>The identifier is made from the one Apple gives an app's developer on this device. TelemetryDeck's software scrambles it on the device before it is sent (a SHA-256 hash), and TelemetryDeck scrambles it again on arrival, so neither TelemetryDeck nor the developer can turn it back into the device's identifier or link it to you. It counts installations, not people. TelemetryDeck says it never stores IP addresses and keeps each summary's time only to the hour; see its <a href="https://telemetrydeck.com/privacy/">privacy policy</a> and <a href="https://telemetrydeck.com/docs/guides/privacy-faq/">privacy FAQ</a>.</p>
+          <p>What the notes and the summary never hold: a place, a city's name or country, coordinates, the text of a search, a temperature or any other weather value, the time of a reading, an alert's threshold, or anything you typed. The widgets and the Apple Watch app count and send nothing.</p>
+          <p>Until the summary is sent, its counts are kept in the app's preferences. TelemetryDeck's software keeps notes and summaries it could not send in the app's cache and tries again while the app is open, and keeps a small record of its own in a preferences file on the device.</p>
         </section>
 
         <section aria-labelledby="services">
@@ -105,6 +121,10 @@
                 <tr>
                   <th scope="row">Environment and Climate Change Canada (MSC GeoMet)</th>
                   <td>For saved Canadian cities, a small area around the city's rounded coordinates. The app asks when it refreshes in the foreground and, from version 1.8, a widget asks when it updates; the watch does not request these alerts. Replies are cached for five minutes. See the <a href="https://www.canada.ca/en/transparency/privacy.html">Government of Canada privacy notice</a>.</td>
+                </tr>
+                <tr>
+                  <th scope="row">TelemetryDeck</th>
+                  <td>Only while <strong>Share anonymous usage</strong> is on: the notes and the daily summary described under <a href="#usage">Usage summary</a>, with the scrambled installation identifier. TelemetryDeck says it never stores IP addresses. See the <a href="https://telemetrydeck.com/privacy/">TelemetryDeck privacy policy</a>.</td>
                 </tr>
                 <tr>
                   <th scope="row">Apple</th>
@@ -141,8 +161,8 @@
         </section>
 
         <section aria-labelledby="no-tracking">
-          <h2 id="no-tracking">No tracking, ads, analytics, or accounts</h2>
-          <p>Twofold has no sign-in, advertising, analytics or crash-reporting service, and no tracking across other companies' apps or websites. It does not use an advertising identifier and does not sell or share personal data for advertising. Forecast alerts are local notifications; the app does not register for push notifications. Apple may process App Store and device diagnostics under your Apple settings and Apple's policies.</p>
+          <h2 id="no-tracking">No tracking, ads, or accounts</h2>
+          <p>Twofold has no sign-in, advertising or crash-reporting service, and no tracking across other companies' apps or websites. Its one analytics service is TelemetryDeck, which receives the anonymous notes and summary described above and nothing else. It does not use an advertising identifier and does not sell or share personal data for advertising. Forecast alerts are local notifications; the app does not register for push notifications. Apple may process App Store and device diagnostics under your Apple settings and Apple's policies.</p>
         </section>
 
         <section aria-labelledby="children">
@@ -156,6 +176,7 @@
             <li>In <strong>Cities</strong> (tap the city name at the top of the app), swipe a saved city to remove it, or use <strong>Edit</strong>. This removes the place, its saved snapshot, its past-week history and any alerts set for that city only, and asks widgets to reload. The separate HTTP response cache is not erased immediately.</li>
             <li>Delete forecast alerts in Twofold's <strong>Settings &rarr; Forecast alerts</strong>, or turn notifications off in iOS <strong>Settings &rarr; Notifications &rarr; Twofold</strong>.</li>
             <li>Change display preferences through the pages in Twofold's <strong>Settings</strong> (the gear at the top right). Edit a widget to choose its city, or remove it through the Home Screen or Lock Screen editor. Change location access in iOS <strong>Settings &rarr; Privacy &amp; Security &rarr; Location Services &rarr; Twofold</strong>. Turning it off does not delete saved places or stop weather requests for them.</li>
+            <li>Turn off <strong>Share anonymous usage</strong> in Twofold's <strong>Settings &rarr; Help &amp; feedback</strong> to stop the notes and the summary. The counts on the device are deleted at once, and notes not yet sent are deleted. What was already sent stays with TelemetryDeck, which cannot tell which of them came from you.</li>
             <li>To remove all local preferences, alerts, snapshots, past-week history, widget data and caches, delete the app. Offloading the app keeps its data. There is no in-app clear-all control.</li>
           </ol>
           <p>Deleting a place or the app does not delete records already held by providers, support emails, or existing device backups. Provider retention follows their linked policies.</p>
